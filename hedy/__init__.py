@@ -2767,12 +2767,14 @@ else:{self.add_debug_breakpoint()}
 {ConvertToPython.indent(body)}"""
 
     def else_clause(self, meta, args):
+        s = '\n'.join(args)
         return f"""else:{self.add_debug_breakpoint()}
-{ConvertToPython.indent('\n'.join(args))}"""
+{ConvertToPython.indent(s)}"""
 
     def elif_clause(self, meta, args):
+        s = '\n'.join(args[1:])
         return f"""elif {args[0]}:{self.add_debug_breakpoint()}
-{ConvertToPython.indent('\n'.join(args[1:]))}"""
+{ConvertToPython.indent(s)}"""
 
 
 @v_args(meta=True)
