@@ -24,10 +24,6 @@ data_files = [
 
     # Folders
     ('content', 'content'),
-    ('hedy/data/grammars', 'hedy/data/grammars'),
-    ('hedy/data/keywords', 'hedy/data/keywords'),
-    ('hedy/data/grammars-Total', 'hedy/data/grammars-Total'),
-    ('hedy/prefixes', 'hedy/prefixes'),
     ('static', 'static'),
     ('templates', 'templates'),
     ('translations', 'translations'),
