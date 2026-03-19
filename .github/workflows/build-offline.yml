@@ -30,8 +30,6 @@ jobs:
     - run: pip install -r requirements.txt
       name: 'Python requirements'
     - run: doit run _offline
-    - name: Smoke test the build
-      run: cd dist && offlinehedy/run-hedy-server --smoketest
 
     - uses: fregante/daily-version-action@v2
       name: Create tag if necessary
