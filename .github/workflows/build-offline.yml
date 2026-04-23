@@ -33,6 +33,11 @@ jobs:
     - name: Smoke test the build
       run: cd dist && offlinehedy/run-hedy-server --smoketest
 
+    - name: Create shortcut
+      shell: pwsh
+      run: |
+        .\build-tools\hedy-offline\create-shortcut-windows.ps1
+
     - uses: fregante/daily-version-action@v2
       name: Create tag if necessary
       id: daily-version
