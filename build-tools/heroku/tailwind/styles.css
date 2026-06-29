@@ -9,6 +9,7 @@ html {
 
 .font-slab {
   font-family: 'Balsamiq Sans', sans-serif;
+  src: url("../../../static/fonts/balsamiq_sans/BalsamiqSans-Regular.ttf");
 }
 
 .dot {
