@@ -16,12 +16,13 @@ import zipfile
 import jinja_partials
 from typing import Optional
 from logging.config import dictConfig as logConfig
-from os import path
-from iso639 import languages
+from iso639 import ALL_LANGUAGES as languages
+import webbrowser
+from bs4 import BeautifulSoup
 
 import static_babel_content
 from markupsafe import Markup
-from flask import (Flask, Response, abort, after_this_request, g, jsonify, make_response,
+from flask import (Flask, abort, after_this_request, g, jsonify, make_response,
                    redirect, request, send_file, url_for, Blueprint,
                    send_from_directory, session, current_app, has_request_context)
 from flask_babel import Babel, format_timedelta
@@ -34,6 +35,7 @@ import hedy
 import website_content as hedy_content
 from hedy import translation as hedy_translation
 import hedyweb
+import envs
 import utils
 from dataclasses import dataclass
 from hedy.error import get_error_text
@@ -44,11 +46,11 @@ from website_content import (adventures_order_per_level, KEYWORDS_ADVENTURES, AL
                              ALL_LANGUAGES, COUNTRIES, FRIENDLY_SORTED_COUNTRIES, HOUR_OF_CODE_ADVENTURES)
 
 from logging_config import LOGGING_CONFIG
-from utils import dump_yaml_rt, is_debug_mode, load_yaml_rt, timems, version, strip_accents
+from utils import timems, version, strip_accents
 from website import (ab_proxying, admin, auth_pages, aws_helpers,
                      cdn, classes, database, for_teachers, s3_logger,
                      profile, programs, querylog, statistics,
-                     translating, tags, surveys, super_teacher, public_adventures, user_activity, feedback)
+                     tags, surveys, super_teacher, public_adventures, user_activity, feedback)
 from website.auth import (current_user, is_admin, is_teacher, is_second_teacher, is_super_teacher, is_students_teacher,
                           has_public_profile, login_user_from_token_cookie, requires_login, requires_login_redirect,
                           forget_current_user)
@@ -136,7 +138,7 @@ def create_app(for_testing=False):
     # For settings with multiple workers, an environment variable is required,
     # otherwise cookies will be constantly removed and re-set by different
     # workers.
-    if utils.is_production():
+    if envs.current_env().require_secret:
         if not os.getenv('SECRET_KEY'):
             raise RuntimeError(
                 'The SECRET KEY must be provided for non-dev environments.')
@@ -151,7 +153,7 @@ def create_app(for_testing=False):
     if for_testing:
         app_obj.config.update(TESTING=True)
 
-    if utils.is_heroku():
+    if envs.current_env().secure_cookies:
         app_obj.config.update(
             SESSION_COOKIE_SECURE=True,
             SESSION_COOKIE_HTTPONLY=True,
@@ -344,15 +346,7 @@ def load_customized_adventures(level, customizations, into_adventures):
     for a in order_for_this_level:
         if a['from_teacher'] and (db_row := teacher_adventure_map.get(a['name'])):
             try:
-                if 'formatted_content' in db_row:
-                    db_row['formatted_content'] = safe_format(db_row['formatted_content'],
-                                                              **hedy_content.KEYWORDS.get(g.keyword_lang))
-                else:
-                    db_row['content'] = safe_format(db_row['content'],
-                                                    **hedy_content.KEYWORDS.get(g.keyword_lang))
-                if 'solution_example' in db_row:
-                    db_row['solution_example'] = safe_format(db_row['solution_example'],
-                                                             **hedy_content.KEYWORDS.get(g.keyword_lang))
+                db_row = prepare_teacher_adventure_for_student_view(db_row, level)
             except Exception:
                 # We don't want teacher being able to break the student UI -> pass this adventure
                 pass
@@ -360,6 +354,62 @@ def load_customized_adventures(level, customizations, into_adventures):
             into_adventures.append(Adventure.from_teacher_adventure_database_row(db_row))
         if not a['from_teacher'] and (adv := builtin_adventure_map.get(a['name'])):
             into_adventures.append(adv)
+
+
+def _html_has_visible_text(content):
+    if not content:
+        return False
+    return BeautifulSoup(content, 'html.parser').get_text(separator='').strip() != ''
+
+
+def _translate_teacher_adventure_code_blocks(content, source_language, target_language, level):
+    if not content:
+        return content
+
+    soup = BeautifulSoup(content, 'html.parser')
+    for tag in soup.find_all('code'):
+        code_text = tag.get_text()
+        if not code_text or code_text.strip() == '':
+            continue
+        try:
+            translated = hedy_translation.translate_keywords(
+                code_text,
+                source_language,
+                target_language,
+                level=int(level),
+            )
+        except Exception:
+            continue
+        if translated is not None:
+            tag.string = translated
+
+    return soup.decode_contents() if soup.body else str(soup)
+
+
+def prepare_teacher_adventure_for_student_view(db_row, level):
+    db_row['content'] = safe_format(db_row.get('content', ''),
+                                    **hedy_content.KEYWORDS.get(g.keyword_lang))
+    if 'formatted_content' in db_row:
+        db_row['formatted_content'] = safe_format(db_row['formatted_content'],
+                                                  **hedy_content.KEYWORDS.get(g.keyword_lang))
+    if 'solution_example' in db_row:
+        db_row['solution_example'] = safe_format(db_row['solution_example'],
+                                                 **hedy_content.KEYWORDS.get(g.keyword_lang))
+
+    formatted_is_empty = not _html_has_visible_text(db_row.get('formatted_content', ''))
+    if formatted_is_empty:
+        source_language = db_row.get('language') or 'en'
+        if (source_language != g.keyword_lang
+                and source_language in ALL_KEYWORD_LANGUAGES
+                and g.keyword_lang in ALL_KEYWORD_LANGUAGES):
+            db_row['content'] = _translate_teacher_adventure_code_blocks(
+                db_row.get('content', ''),
+                source_language,
+                g.keyword_lang,
+                level,
+            )
+
+    return db_row
 
 
 @app.before_app_request
@@ -422,13 +472,6 @@ def initialize_session():
                        is_teacher=is_teacher(g.user), is_admin=is_admin(g.user), is_super_teacher=is_admin(g.user))
 
 
-if os.getenv('IS_PRODUCTION'):
-    @app.before_app_request
-    def reject_e2e_requests():
-        if utils.is_testing_request(request):
-            return 'No E2E tests are allowed in production', 400
-
-
 def g_for_teachers():
     """Get the FOR_TEACHERS object from the current Flask app."""
     return current_app.config['hedy_globals']['FOR_TEACHERS']
@@ -442,7 +485,7 @@ def before_request_proxy_testing():
 
 # HTTP -> HTTPS redirect
 # https://stackoverflow.com/questions/32237379/python-flask-redirect-to-https-from-http/32238093
-if os.getenv('REDIRECT_HTTP_TO_HTTPS'):
+if os.getenv('REDIRECT_HTTP_TO_HTTPS') in ['true', '1']:
     @app.before_app_request
     def before_request_https():
         if request.url.startswith('http://'):
@@ -451,13 +494,12 @@ if os.getenv('REDIRECT_HTTP_TO_HTTPS'):
             return redirect(url, code=302)
 
 
-# We don't need to log in offline mode
-if utils.is_offline_mode():
-    parse_logger = s3_logger.NullLogger()
-else:
+if envs.current_env().event_logs:
     parse_logger = s3_logger.S3Logger(name="parse", config_key="s3-parse-logs")
     querylog.LOG_QUEUE.set_transmitter(
         aws_helpers.s3_querylog_transmitter_from_env())
+else:
+    parse_logger = s3_logger.NullLogger()
 
 
 @app.before_app_request
@@ -496,12 +538,6 @@ def setup_language():
         return make_response(gettext("request_invalid"), 404)
 
 
-if utils.is_heroku() and not os.getenv('HEROKU_RELEASE_CREATED_AT'):
-    logger.warning(
-        'Cannot determine release; enable Dyno metadata by running'
-        '"heroku labs:enable runtime-dyno-metadata -a <APP_NAME>"')
-
-
 # A context processor injects variables in the context that are available to all templates.
 @app.app_context_processor
 def enrich_context_with_user_info():
@@ -520,10 +556,14 @@ def enrich_context_with_user_info():
 
 @app.app_context_processor
 def add_generated_css_file():
-    debug_or_offline_mode = is_debug_mode() or utils.is_offline_mode()
     return {
-        "generated_css_file": '/css/generated.full.css' if debug_or_offline_mode else '/css/generated.css'
+        "generated_css_file": '/css/generated.css' if envs.current_env().min_tailwind else '/css/generated.full.css'
     }
+
+
+@app.app_context_processor
+def add_frontend_feature_flags():
+    return get_frontend_feature_flags_context()
 
 
 @app.app_context_processor
@@ -554,7 +594,7 @@ def set_security_headers(response):
 @app.teardown_request
 def teardown_request_finish_logging(exc):
     log_record = querylog.finish_global_log_record(exc)
-    if is_debug_mode():
+    if envs.current_env().event_logs and not envs.current_env().cloud_services:
         logger.debug(repr(log_record.as_data()))
 
 
@@ -727,6 +767,7 @@ def parse_by_id(user):
     program = g_db().program_by_id(body.get('id'))
     if program and program.get('username') == user['username']:
         try:
+            initialize_hedylang_feature_flags_for_request()
             hedy.transpile(
                 program.get('code'),
                 program.get('level'),
@@ -743,6 +784,7 @@ def parse_by_id(user):
 def prepare_files():
     body = request.json
     # Prepare the file -> return the "secret" filename as response
+    initialize_hedylang_feature_flags_for_request()
     transpiled_code = hedy.transpile(body.get("code"), body.get("level"), body.get("lang"))
     filename = utils.random_id_generator(12)
 
@@ -814,6 +856,7 @@ def generate_microbit_file():
         code = body.get("code")
         level = body.get("level")
 
+        initialize_hedylang_feature_flags_for_request()
         transpile_result = hedy.transpile_and_return_python(code, level)
         save_transpiled_code_for_microbit(transpile_result)
         return make_response({'filename': 'Micro-bit.py', 'microbit': True}, 200)
@@ -883,6 +926,7 @@ def transpile_add_stats(code, level, lang_, is_debug):
     username = current_user()['username'] or None
     number_of_lines = code.count('\n')
     try:
+        initialize_hedylang_feature_flags_for_request()
         result = hedy.transpile(code, level, lang_, is_debug=is_debug)
         statistics.add(
             username, lambda id_: g_db().add_program_stats(id_, level, number_of_lines, None))
@@ -906,6 +950,42 @@ def hedy_error_to_response(ex):
         "Error": get_error_text(ex, keyword_lang),
         "Location": ex.error_location
     }
+
+
+def get_frontend_feature_flags_context():
+    """Return the frontend feature-flag context used by templates and transpilation."""
+    return {
+        "frontend_environment": envs.frontend_environment(),
+        "feature_flags": {},
+    }
+
+
+def initialize_hedylang_feature_flags_for_request():
+    """Initialize hedylang feature flags before each transpilation operation."""
+    context = get_frontend_feature_flags_context()
+    external = getattr(hedy, "external", None)
+
+    if external is None:
+        logger.warning("hedy.external is unavailable; skipping feature-flag initialization")
+        return
+
+    init_from_context = getattr(external, "initialize_frontend_feature_flags_from_context", None)
+    if callable(init_from_context):
+        init_from_context(context)
+        return
+
+    # Backward-compatible path for older hedylang versions.
+    init_legacy = getattr(external, "initialize_frontend_feature_flags", None)
+    if callable(init_legacy):
+        init_legacy(
+            frontend_environment=context.get("frontend_environment"),
+            feature_flags=context.get("feature_flags"),
+        )
+        return
+
+    logger.warning(
+        "hedy.external has no supported frontend feature-flag initializer; skipping initialization"
+    )
 
 
 @app.route('/report_error', methods=['POST'])
@@ -951,13 +1031,12 @@ def version_page():
     This is an admin-only page, it does not need to be linked.
    (Also does not have any sensitive information so it's fine to be unauthenticated).
     """
-    app_name = os.getenv('HEROKU_APP_NAME')
-
+    app_name = os.getenv('HEROKU_APP_NAME', 'Not running on Heroku')
     vrz = os.getenv('HEROKU_RELEASE_CREATED_AT')
     the_date = datetime.date.fromisoformat(
         vrz[:10]) if vrz else datetime.date.today()
 
-    commit = os.getenv('HEROKU_SLUG_COMMIT', '????')[0:6]
+    commit = os.getenv('HEROKU_SLUG_COMMIT', '???? Not running on Heroku')[0:6]
 
     return render_template('version-page.html',
                            app_name=app_name,
@@ -1543,6 +1622,8 @@ def view_program_redesing(user, id):
             if next_submitted_program_id:
                 break
 
+    class_info = g_db().get_class(class_id) if class_id else None
+
     arguments_dict["can_checkoff_program"] = prog_perms.can_checkoff
     arguments_dict["can_unsubmit_program"] = prog_perms.can_unsubmit
 
@@ -1553,6 +1634,7 @@ def view_program_redesing(user, id):
             page="view-program", lang=g.lang, level=int(result["level"]), code=code
         ),
         class_id=student_customizations.get("id"),
+        class_info=class_info,
         next_submitted_program_id=next_submitted_program_id,
         next_submitted_classmate_program_id=next_submitted_classmate_program_id,
         adventure=adventure,
@@ -2111,6 +2193,7 @@ def pre_process_public_program(program):
     # If program does not have an error value set -> parse it and set value
     if 'error' not in program:
         try:
+            initialize_hedylang_feature_flags_for_request()
             hedy.transpile(program.get('code'), program.get('level'), program.get('lang'))
             program['error'] = False
         except BaseException:
@@ -2152,7 +2235,10 @@ def get_slides(level):
         add_used_slides_to_subscription(email)
 
     slides = SLIDES[g.lang].get_slides_for_level(level, keyword_language)
-    return render_template('slides.html', level=level, slides=slides)
+    # Embedded in the slides preview on /for-teachers/slides rather than presented
+    # full screen; see the comments in slides.html for what that changes.
+    embed = bool(request.args.get('embed'))
+    return render_template('slides.html', level=level, slides=slides, embed=embed)
 
 
 @app.route('/translate_keywords', methods=['POST'])
@@ -2311,10 +2397,12 @@ def other_languages(lang_param=None):
     other_langs = [make_lang_obj(lang) for lang in ALL_LANGUAGES.keys() if lang != current_lang]
 
     # Get English names for all Hedy supported languages using iso639 and their codes
+    # Make a part1 map of all languages
+    part1_map = {language.part1: language for language in languages}
     for lang_code in other_langs:
         lang = lang_code.get('lang')
-        if lang in languages.part1:
-            language = languages.get(part1=lang)
+        language = part1_map.get(lang)
+        if language:
             lang_code['english'] = language.name
         else:
             lang_code['english'] = non_iso_transl.get(lang, '')
@@ -2407,27 +2495,6 @@ def get_user_messages():
 @app.route('/translating')
 def translating_page():
     return render_template('translating.html')
-
-
-@app.route('/update_yaml', methods=['POST'])
-def update_yaml():
-    filename = path.join('coursedata', request.form['file'])
-    # The file MUST point to something inside our 'coursedata' directory
-    filepath = path.abspath(filename)
-    expected_path = path.abspath('coursedata')
-    if not filepath.startswith(expected_path):
-        raise RuntimeError('Invalid path given')
-
-    data = load_yaml_rt(filepath)
-    for key, value in request.form.items():
-        if key.startswith('c:'):
-            translating.apply_form_change(
-                data, key[2:], translating.normalize_newlines(value))
-
-    data = translating.normalize_yaml_blocks(data)
-
-    return Response(dump_yaml_rt(data), mimetype='application/x-yaml',
-                    headers={'Content-disposition': 'attachment; filename=' + request.form['file'].replace('/', '-')})
 
 
 @app.route('/user/<username>')
@@ -2586,6 +2653,9 @@ def get_current_user_program_permissions(program):
 
     Verify that the program is either public, the current user is the creator, teacher or the user is admin.
     """
+    if not program:
+        return None
+
     user = current_user()
 
     is_current_user_author = program['username'] == user['username']
@@ -2596,7 +2666,7 @@ def get_current_user_program_permissions(program):
     if can_view:
         can_edit = is_current_user_author
         can_checkoff = students_teacher
-        can_unsubmit = program.get('submitted', False) and (is_admin or students_teacher)
+        can_unsubmit = program.get('submitted', False) and (is_admin(user) or students_teacher)
         return ProgramPermissions(can_edit, can_checkoff, can_unsubmit)
 
     return None
@@ -2686,8 +2756,9 @@ def on_offline_mode():
         (g, r'                    __/ |'),
         (g, r'   o f f l i n e   |___/ '),
         ('', ''),
-        ('', 'Use a web browser to visit the following website:'),
+        ('', 'Use a web browser to visit (one of) the following website(s):'),
         ('', ''),
+        (Fore.BLUE, f'   http://localhost/ {Fore.BLACK}(only works on this machine)'.ljust(70)),
         *[(Fore.BLUE, f'   http://{ip}/') for ip in ip_addresses],
         ('', ''),
         ('', ''),
@@ -2696,7 +2767,7 @@ def on_offline_mode():
     # Init and deinit so we don't mess with Werkzeug's use of this library later on.
     with colorama_text():
         for style, text in lines:
-            print(Back.WHITE + Fore.BLACK + ''.ljust(10) + style + text.ljust(60) + Style.RESET_ALL)
+            print(Back.WHITE + Fore.BLACK + ''.ljust(10) + style + text.ljust(65) + Style.RESET_ALL)
 
     # We have this option for testing the offline build. A lot of modules read
     # files upon import, and those happen before the offline build 'cd' we do
@@ -2707,15 +2778,15 @@ def on_offline_mode():
     if smoke_test:
         sys.exit(0)
 
+    # Automatically open Hedy in browser
+    webbrowser.open('http://localhost/')
+
 
 if __name__ == '__main__':
     # Start the server on a developer machine. Flask is initialized in DEBUG mode, so it
     # hot-reloads files. We also flip our own internal "debug mode" flag to True, so our
     # own file loading routines also hot-reload.
-    no_debug_mode_requested = os.getenv('NO_DEBUG_MODE')
-    utils.set_debug_mode(not no_debug_mode_requested)
-
-    if utils.is_offline_mode():
+    if envs.is_offline_mode():
         on_offline_mode()
 
     app_obj = create_app()
@@ -2729,7 +2800,7 @@ if __name__ == '__main__':
         if key not in os.environ:
             os.environ[key] = value
 
-    if utils.is_debug_mode():
+    if not envs.current_env().statics_caching:
         # For local debugging, fetch all static files on every request
         app_obj.config['SEND_FILE_MAX_AGE_DEFAULT'] = None
 
@@ -2745,9 +2816,9 @@ if __name__ == '__main__':
 
         tracemalloc.start()
         start_snapshot = tracemalloc.take_snapshot()
-    debug = utils.is_debug_mode() and not (is_in_debugger or profile_memory)
+    debug = envs.current_env().hot_reload_py and not (is_in_debugger or profile_memory)
     if debug:
-        logger.debug('app starting in debug mode')
+        logger.debug('app starting with hot reloading enabled')
 
     # Threaded option enables multiple instances for multiple user access support
     app_obj.run(threaded=True, debug=debug,

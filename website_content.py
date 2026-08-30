@@ -49,7 +49,8 @@ customize_babel_locale(CUSTOM_BABEL_LANGUAGES)
 KEYWORDS_ADVENTURES = {'print_command', 'ask_command', 'is_command', 'sleep_command', 'random_command',
                        'add_remove_command', 'quotation_marks', 'if_command', 'in_command', 'maths', 'repeat_command',
                        'repeat_command_2', 'for_command', 'and_or_command', 'while_command', 'elif_command',
-                       'clear_command', 'debugging', 'functions', 'functions_2', 'functions_3', 'operators', 'lists'}
+                       'clear_command', 'debugging', 'functions', 'functions_2', 'functions_3', 'operators', 'lists',
+                       'greater_than_command'}
 
 
 def adventures_order_per_level():
@@ -76,10 +77,9 @@ ADVENTURE_ORDER_PER_LEVEL_OLD = {
         'hospital'
     ],
     2: [
-        'is_command',
-        'rock',
         'ask_command',
-        'rock_2',
+        'rock',
+        'is_command',
         'haunted',
         'sleep_command',
         'parrot',
@@ -236,29 +236,35 @@ ADVENTURE_ORDER_PER_LEVEL_OLD = {
         'songs_2',
         'turtle',
         'turtle_draw_it',
+        'turtle_draw_it_2',
         'debugging',
         'hospital',
         'congratulations'
     ],
     13: [
         'print_command',
-        'ask_command',
-        'if_command',
-        'is_command',
-        'operators',
-        'for_command',
         'story',
-        'songs',
+        'ask_command',
+        'market',
+        'if_command',
+        'calculator',
+        'greater_than_command',
+        'park',
         'quizmaster',
-        'turtle_draw_it',
+        'operators',
+        'carnival',
+        'for_command',
         'debugging',
         'hospital'
     ],
     14: ['lists',
          'random_command',
-         'for_command',
          'haunted',
+         'for_command',
+         'songs_2',
+         'calculator',
          'songs',
+         'turtle_draw_it',
          'language',
          'debugging',
          'hospital'
@@ -269,6 +275,7 @@ ADVENTURE_ORDER_PER_LEVEL_OLD = {
         'music_2',
         'functions_2',
         'songs',
+        'turtle_draw_it_2',
         'music_3',
         'hotel',
         'functions_3',

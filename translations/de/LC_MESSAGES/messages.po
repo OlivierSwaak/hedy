@@ -168,6 +168,9 @@ msgstr ""
 msgid "about_this_adventure"
 msgstr ""
 
+msgid "accept_program"
+msgstr ""
+
 msgid "account_overview"
 msgstr "Kontoübersicht"
 
@@ -180,10 +183,16 @@ msgstr ""
 msgid "add"
 msgstr ""
 
+msgid "add_adventures"
+msgstr ""
+
 msgid "add_students"
 msgstr "Schüler*innen hinzufügen"
 
 msgid "add_your_language"
+msgstr ""
+
+msgid "additional_teachers"
 msgstr ""
 
 msgid "admin"
@@ -207,10 +216,6 @@ msgstr "Du hast bereits ein Abenteuer mit diesem Namen."
 msgid "adventure_empty"
 msgstr "Du hast keinen Abenteuernamen eingegeben!"
 
-#, fuzzy
-msgid "adventure_exp_3"
-msgstr "Stelle sicher, dass du Schlüsselwörter immer mit { } einschließt, dann werden sie korrekt erkannt. Du kannst den Vorschau-Knopf verwenden, um eine gestylte Version deines Abenteuers zu sehen. Um das Abenteuer auf einer eigenen Seite zu sehen, wähle \"view\" von der Lehrerseite."
-
 msgid "adventure_exp_classes"
 msgstr ""
 
@@ -233,6 +238,9 @@ msgid "adventure_updated"
 msgstr "Das Abenteuer wurde geupdatet!"
 
 msgid "adventures"
+msgstr ""
+
+msgid "adventures_at_level"
 msgstr ""
 
 msgid "adventures_completed"
@@ -277,26 +285,59 @@ msgstr "Hast du schon ein Konto?"
 msgid "already_program_running"
 msgstr "Es läuft bereits ein Programm, beende es zunächst."
 
+msgid "archive"
+msgstr ""
+
 msgid "archive_class"
+msgstr ""
+
+msgid "archived"
+msgstr ""
+
+msgid "archived_classes"
 msgstr ""
 
 msgid "are_you_sure"
 msgstr "Bist du sicher? Du kannst diese Aktion nicht rückgängig machen."
 
+msgid "are_you_sure_soft"
+msgstr ""
+
 msgid "ask_needs_var"
 msgstr "Ab Level 2 muss `{ask}` mit einer Variable benutzt werden. Beispiel: Name `{is}` `{ask}` Wie heißt du?"
+
+msgid "available"
+msgstr ""
+
+msgid "available_for_students"
+msgstr ""
 
 msgid "available_in"
 msgstr ""
 
+msgid "available_levels"
+msgstr ""
+
 msgid "back_to_class"
 msgstr "Gehe zurück zur Klasse"
+
+msgid "background_information"
+msgstr ""
+
+msgid "background_information_info"
+msgstr ""
 
 msgid "become_a_sponsor"
 msgstr "Werde ein Sponsor"
 
 msgid "birth_year"
 msgstr "Geburtjahr"
+
+msgid "built_in"
+msgstr ""
+
+msgid "built_in_adventures"
+msgstr ""
 
 msgid "by"
 msgstr "von"
@@ -406,7 +447,13 @@ msgstr "Befehle"
 msgid "configure"
 msgstr ""
 
+msgid "configure_class"
+msgstr ""
+
 msgid "configure_class_info"
+msgstr ""
+
+msgid "confirm"
 msgstr ""
 
 msgid "connect_guest_teacher"
@@ -416,6 +463,9 @@ msgid "constant_variable_role"
 msgstr ""
 
 msgid "containing"
+msgstr ""
+
+msgid "content"
 msgstr ""
 
 msgid "content_invalid"
@@ -511,6 +561,9 @@ msgstr "Ersteller"
 msgid "current_password"
 msgstr "Derzeitiges Passwort"
 
+msgid "custom_adventures"
+msgstr ""
+
 msgid "customization_deleted"
 msgstr "Anpassungen erfolgreich gelöscht."
 
@@ -522,6 +575,9 @@ msgstr "Modifiziere Abenteuer"
 
 msgid "customize_class"
 msgstr "Passe eine Klasse an"
+
+msgid "customize_levels"
+msgstr ""
 
 msgid "danger_zone"
 msgstr ""
@@ -1033,6 +1089,9 @@ msgstr "Eine mitwachsende Programmiersprache"
 msgid "main_title"
 msgstr ""
 
+msgid "make_public"
+msgstr ""
+
 msgid "make_sure_you_are_done"
 msgstr "Stelle sicher, dass du fertig bist! Du wirst dein Programm nicht mehr ändern können, nach du \"Abgeben\" geklickt hast."
 
@@ -1043,6 +1102,9 @@ msgid "manage_students"
 msgstr ""
 
 msgid "manage_students_info"
+msgstr ""
+
+msgid "manual_out_of_date"
 msgstr ""
 
 msgid "more_adventures"
@@ -1123,7 +1185,16 @@ msgstr "Hast du noch kein Konto?"
 msgid "no_accounts"
 msgstr "Es gibt keine Konten zu erstellen."
 
+msgid "no_adventures_in_level"
+msgstr ""
+
 msgid "no_adventures_yet"
+msgstr ""
+
+msgid "no_built_in_adventures_available"
+msgstr ""
+
+msgid "no_custom_adventures_available"
 msgstr ""
 
 msgid "no_existing_class"
@@ -1177,6 +1248,9 @@ msgstr "Du musst eingeloggt sein, um eine Lösung abzugeben."
 
 msgid "not_teacher"
 msgstr "Du bist anscheinend nicht die Lehrkraft!"
+
+msgid "not_used_in_classes"
+msgstr ""
 
 msgid "number"
 msgstr "eine Zahl"
@@ -1305,10 +1379,13 @@ msgstr "Bevorzugte Schlüsselwortsprache"
 msgid "preferred_language"
 msgstr "Bevorzugte Sprache"
 
+msgid "present"
+msgstr ""
+
 msgid "preview"
 msgstr "Vorschau"
 
-msgid "preview_teacher_mode"
+msgid "preview_as_student"
 msgstr ""
 
 msgid "previewing_adventure"
@@ -1355,6 +1432,15 @@ msgstr "Dieses Programm enthält einen Fehler, bist du dir sicher, dass du es te
 
 msgid "program_header"
 msgstr "Meine Programme"
+
+msgid "program_size_too_long"
+msgstr ""
+
+msgid "program_status_accepted"
+msgstr ""
+
+msgid "program_status_not_accepted"
+msgstr ""
 
 msgid "program_too_large_exception"
 msgstr "Programme zu groß"
@@ -1406,6 +1492,9 @@ msgstr "Zuletzt verwendete Programme"
 
 msgid "recover_password"
 msgstr "Passwort-Reset anfordern"
+
+msgid "reject_program"
+msgstr ""
 
 msgid "remove"
 msgstr "Löschen"
@@ -1503,11 +1592,17 @@ msgstr "Programm erfolgreich gespeichert."
 msgid "save_turtle_drawing"
 msgstr ""
 
+msgid "saving_language_failed"
+msgstr ""
+
 msgid "search"
 msgstr "Suche..."
 
 msgid "search_button"
 msgstr "Suche"
+
+msgid "search_results"
+msgstr ""
 
 msgid "second_teacher"
 msgstr ""
@@ -1560,11 +1655,20 @@ msgstr "Diese Einladung wurde gesendet von"
 msgid "sent_password_recovery"
 msgstr "Du solltest bald eine Email mit Anweisungen zum Zurücksetzen des Passworts erhalten."
 
+msgid "set_adventure_name"
+msgstr ""
+
 msgid "settings"
 msgstr "Meine persönlichen Einstellungen"
 
+msgid "settings_header"
+msgstr ""
+
 msgid "share_by_giving_link"
 msgstr "Zeige dein Programm anderen, indem du ihnen den Link unten gibst:"
+
+msgid "share_with_teachers"
+msgstr ""
 
 msgid "share_your_program"
 msgstr "Teile dein Programm"
@@ -1585,6 +1689,9 @@ msgid "sleeping"
 msgstr ""
 
 msgid "slides"
+msgstr ""
+
+msgid "slides_card_info"
 msgstr ""
 
 msgid "slides_for_level"
@@ -1772,6 +1879,9 @@ msgstr ""
 "echo also ist dein Name \n"
 "</pre>"
 
+msgid "template_code_solution"
+msgstr ""
+
 msgid "this_adventure_has_an_example_solution"
 msgstr ""
 
@@ -1854,6 +1964,12 @@ msgid "translator"
 msgstr "Übersetzer"
 
 msgid "turned_into_teacher"
+msgstr ""
+
+msgid "unarchive"
+msgstr ""
+
+msgid "unarchive_class"
 msgstr ""
 
 msgid "unauthorized"
@@ -2613,4 +2729,16 @@ msgstr "Dein Programm"
 
 #~ msgid "facebook_page"
 #~ msgstr ""
+
+#~ msgid "view_teaching_materials_of_level"
+#~ msgstr ""
+
+#~ msgid "preview_teacher_mode"
+#~ msgstr ""
+
+#~ msgid "usage"
+#~ msgstr ""
+
+#~ msgid "adventure_exp_3"
+#~ msgstr "Stelle sicher, dass du Schlüsselwörter immer mit { } einschließt, dann werden sie korrekt erkannt. Du kannst den Vorschau-Knopf verwenden, um eine gestylte Version deines Abenteuers zu sehen. Um das Abenteuer auf einer eigenen Seite zu sehen, wähle \"view\" von der Lehrerseite."
 

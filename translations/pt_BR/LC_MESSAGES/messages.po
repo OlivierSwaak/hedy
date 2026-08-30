@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2000-01-01 00:00+0000\n"
-"PO-Revision-Date: 2026-02-02 19:29+0000\n"
-"Last-Translator: Yılmaz Durmaz <yilmaz_durmaz@hotmail.com>\n"
+"PO-Revision-Date: 2026-08-13 00:49+0000\n"
+"Last-Translator: nicejammer <nicejammer@users.noreply.hosted.weblate.org>\n"
 "Language-Team: pt_BR <LL@li.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 "Generated-By: Babel 2.14.0\n"
 
 msgid "Access Before Assign"
@@ -171,6 +171,9 @@ msgstr "Sua função usou a quantidade errada de parâmetros. Você forneceu {us
 msgid "about_this_adventure"
 msgstr ""
 
+msgid "accept_program"
+msgstr ""
+
 msgid "account_overview"
 msgstr "Visão geral da conta"
 
@@ -183,10 +186,16 @@ msgstr ""
 msgid "add"
 msgstr "Adicionar"
 
+msgid "add_adventures"
+msgstr ""
+
 msgid "add_students"
 msgstr "Adicionar estudantes"
 
 msgid "add_your_language"
+msgstr ""
+
+msgid "additional_teachers"
 msgstr ""
 
 msgid "admin"
@@ -198,6 +207,7 @@ msgstr "Aventura"
 msgid "adventure_cloned"
 msgstr "Aventura clonada"
 
+#, fuzzy
 msgid "adventure_code_button"
 msgstr "Código da Aventura"
 
@@ -209,10 +219,6 @@ msgstr "Você já tem uma aventura com esse nome."
 
 msgid "adventure_empty"
 msgstr "Você não digitou um nome para a aventura!"
-
-#, fuzzy
-msgid "adventure_exp_3"
-msgstr "You can use the \"preview\" button to view a styled version of your adventure. To view the adventure on a dedicated page, select \"view\" from the teachers page."
 
 msgid "adventure_exp_classes"
 msgstr ""
@@ -237,6 +243,9 @@ msgstr "A aventura foi atualizada!"
 
 msgid "adventures"
 msgstr "Aventuras Disponíveis"
+
+msgid "adventures_at_level"
+msgstr ""
 
 msgid "adventures_completed"
 msgstr ""
@@ -280,19 +289,46 @@ msgstr "Já tem uma conta?"
 msgid "already_program_running"
 msgstr "Já há um programa em execução, finalize-o primeiro."
 
+msgid "archive"
+msgstr ""
+
 msgid "archive_class"
+msgstr ""
+
+msgid "archived"
+msgstr ""
+
+msgid "archived_classes"
 msgstr ""
 
 msgid "are_you_sure"
 msgstr "Tem certeza? Você não poderá reverter esta ação."
 
+msgid "are_you_sure_soft"
+msgstr ""
+
 msgid "ask_needs_var"
 msgstr "A partir do nível 2, `{ask}` precisa ser usado com uma variável. Exemplo: nome `{is}` `{ask}` Qual é o seu nome?"
+
+msgid "available"
+msgstr ""
+
+msgid "available_for_students"
+msgstr ""
 
 msgid "available_in"
 msgstr ""
 
+msgid "available_levels"
+msgstr ""
+
 msgid "back_to_class"
+msgstr ""
+
+msgid "background_information"
+msgstr ""
+
+msgid "background_information_info"
 msgstr ""
 
 msgid "become_a_sponsor"
@@ -300,6 +336,12 @@ msgstr "Tornar-se um patrocinador"
 
 msgid "birth_year"
 msgstr "Ano de nascimento"
+
+msgid "built_in"
+msgstr ""
+
+msgid "built_in_adventures"
+msgstr ""
 
 msgid "by"
 msgstr "por"
@@ -409,7 +451,13 @@ msgstr "Comandos"
 msgid "configure"
 msgstr ""
 
+msgid "configure_class"
+msgstr ""
+
 msgid "configure_class_info"
+msgstr ""
+
+msgid "confirm"
 msgstr ""
 
 msgid "connect_guest_teacher"
@@ -419,6 +467,9 @@ msgid "constant_variable_role"
 msgstr ""
 
 msgid "containing"
+msgstr ""
+
+msgid "content"
 msgstr ""
 
 msgid "content_invalid"
@@ -514,6 +565,9 @@ msgstr "Criador"
 msgid "current_password"
 msgstr "Senha atual"
 
+msgid "custom_adventures"
+msgstr ""
+
 msgid "customization_deleted"
 msgstr "Personalizações deletadas com sucesso."
 
@@ -524,6 +578,9 @@ msgid "customize_adventure"
 msgstr "Personalizar aventura"
 
 msgid "customize_class"
+msgstr ""
+
+msgid "customize_levels"
 msgstr ""
 
 msgid "danger_zone"
@@ -1027,6 +1084,9 @@ msgstr "Uma linguagem de programação gradual"
 msgid "main_title"
 msgstr ""
 
+msgid "make_public"
+msgstr ""
+
 msgid "make_sure_you_are_done"
 msgstr "Certifique-se de que está tudo pronto! Você não poderá mais editar o seu programa depois de clicar em \"Entregar\"."
 
@@ -1037,6 +1097,9 @@ msgid "manage_students"
 msgstr ""
 
 msgid "manage_students_info"
+msgstr ""
+
+msgid "manual_out_of_date"
 msgstr ""
 
 msgid "more_adventures"
@@ -1117,9 +1180,18 @@ msgstr "Ainda não tem uma conta?"
 msgid "no_accounts"
 msgstr "Não há contas para criar."
 
+msgid "no_adventures_in_level"
+msgstr ""
+
 #, fuzzy
 msgid "no_adventures_yet"
 msgstr "Não há nenhuma aventura pública ainda..."
+
+msgid "no_built_in_adventures_available"
+msgstr ""
+
+msgid "no_custom_adventures_available"
+msgstr ""
 
 msgid "no_existing_class"
 msgstr ""
@@ -1170,6 +1242,9 @@ msgid "not_logged_in_handin"
 msgstr "Você precisa estar logado(a) para entregar uma tarefa."
 
 msgid "not_teacher"
+msgstr ""
+
+msgid "not_used_in_classes"
 msgstr ""
 
 msgid "number"
@@ -1299,10 +1374,13 @@ msgstr "Idioma preferido de comandos"
 msgid "preferred_language"
 msgstr "Idioma preferido"
 
+msgid "present"
+msgstr ""
+
 msgid "preview"
 msgstr "Prévia"
 
-msgid "preview_teacher_mode"
+msgid "preview_as_student"
 msgstr ""
 
 msgid "previewing_adventure"
@@ -1349,6 +1427,15 @@ msgstr "Esse programa contém um erro. Tem certeza de que deseja compartilhá-lo
 
 msgid "program_header"
 msgstr "Meus programas"
+
+msgid "program_size_too_long"
+msgstr ""
+
+msgid "program_status_accepted"
+msgstr ""
+
+msgid "program_status_not_accepted"
+msgstr ""
 
 msgid "program_too_large_exception"
 msgstr "Programa longo demais"
@@ -1400,6 +1487,9 @@ msgstr "Meus programas recentes"
 
 msgid "recover_password"
 msgstr "Solicite uma redefinição de senha"
+
+msgid "reject_program"
+msgstr ""
 
 msgid "remove"
 msgstr "Remover"
@@ -1497,11 +1587,17 @@ msgstr "Programa salvo com sucesso."
 msgid "save_turtle_drawing"
 msgstr ""
 
+msgid "saving_language_failed"
+msgstr ""
+
 msgid "search"
 msgstr "Buscar..."
 
 msgid "search_button"
 msgstr "Procurar"
+
+msgid "search_results"
+msgstr ""
 
 msgid "second_teacher"
 msgstr ""
@@ -1554,11 +1650,20 @@ msgstr "Esse convite foi enviado por"
 msgid "sent_password_recovery"
 msgstr "Em breve, você receberá um e-mail com instruções sobre como redefinir sua senha."
 
+msgid "set_adventure_name"
+msgstr ""
+
 msgid "settings"
 msgstr "Minhas configurações pessoais"
 
+msgid "settings_header"
+msgstr ""
+
 msgid "share_by_giving_link"
 msgstr "Mostre seu programa a outras pessoas dando a elas o link abaixo:"
+
+msgid "share_with_teachers"
+msgstr ""
 
 msgid "share_your_program"
 msgstr "Compartilhar programa"
@@ -1579,6 +1684,9 @@ msgid "sleeping"
 msgstr ""
 
 msgid "slides"
+msgstr ""
+
+msgid "slides_card_info"
 msgstr ""
 
 msgid "slides_for_level"
@@ -1765,6 +1873,9 @@ msgstr ""
 "echo então o seu nome é \n"
 "</pre>"
 
+msgid "template_code_solution"
+msgstr ""
+
 msgid "this_adventure_has_an_example_solution"
 msgstr ""
 
@@ -1847,6 +1958,12 @@ msgid "translator"
 msgstr "Tradutor"
 
 msgid "turned_into_teacher"
+msgstr ""
+
+msgid "unarchive"
+msgstr ""
+
+msgid "unarchive_class"
 msgstr ""
 
 msgid "unauthorized"
@@ -2627,4 +2744,16 @@ msgstr "Seu programa"
 
 #~ msgid "facebook_page"
 #~ msgstr ""
+
+#~ msgid "view_teaching_materials_of_level"
+#~ msgstr ""
+
+#~ msgid "preview_teacher_mode"
+#~ msgstr ""
+
+#~ msgid "usage"
+#~ msgstr ""
+
+#~ msgid "adventure_exp_3"
+#~ msgstr "You can use the \"preview\" button to view a styled version of your adventure. To view the adventure on a dedicated page, select \"view\" from the teachers page."
 

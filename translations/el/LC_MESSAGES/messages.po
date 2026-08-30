@@ -171,6 +171,9 @@ msgstr ""
 msgid "about_this_adventure"
 msgstr ""
 
+msgid "accept_program"
+msgstr ""
+
 msgid "account_overview"
 msgstr "Σύνοψη λογαριασμού"
 
@@ -183,11 +186,17 @@ msgstr ""
 msgid "add"
 msgstr ""
 
+msgid "add_adventures"
+msgstr ""
+
 #, fuzzy
 msgid "add_students"
 msgstr "μαθητών"
 
 msgid "add_your_language"
+msgstr ""
+
+msgid "additional_teachers"
 msgstr ""
 
 msgid "admin"
@@ -211,10 +220,6 @@ msgstr "Έχεις ήδη μια περιπέτεια με αυτό το όνο�
 msgid "adventure_empty"
 msgstr "Δεν έδωσες όνομα περιπέτειας!"
 
-#, fuzzy
-msgid "adventure_exp_3"
-msgstr "Μπορείς να χρησιμοποιήσεις το κουμπί \"προεπισκόπηση\" για να δεις μια στυλιζαρισμένη έκδοση της περιπέτειάς σου. Για να δεις την περιπέτεια σε μια ειδική σελίδα, επίλεξε \"προβολή\" από τη σελίδα καθηγητών."
-
 msgid "adventure_exp_classes"
 msgstr ""
 
@@ -237,6 +242,9 @@ msgid "adventure_updated"
 msgstr "Η περιπέτεια έχει ενημερωθεί!"
 
 msgid "adventures"
+msgstr ""
+
+msgid "adventures_at_level"
 msgstr ""
 
 msgid "adventures_completed"
@@ -282,27 +290,60 @@ msgstr "Έχεις ήδη λογαριασμό;"
 msgid "already_program_running"
 msgstr "Ξεκίνα τον προγραμματισμό"
 
+msgid "archive"
+msgstr ""
+
 msgid "archive_class"
+msgstr ""
+
+msgid "archived"
+msgstr ""
+
+msgid "archived_classes"
 msgstr ""
 
 msgid "are_you_sure"
 msgstr "Είσαι σίγουρος/η; Δεν μπορείς να αναιρέσεις αυτήν την ενέργεια."
 
+msgid "are_you_sure_soft"
+msgstr ""
+
 #, fuzzy
 msgid "ask_needs_var"
 msgstr "Ξεκινώντας από το επίπεδο 2, το ask πρέπει να χρησιμοποιείται με μεταβλητή. Παράδειγμα: name is ask Πώς σε λένε;"
 
+msgid "available"
+msgstr ""
+
+msgid "available_for_students"
+msgstr ""
+
 msgid "available_in"
+msgstr ""
+
+msgid "available_levels"
 msgstr ""
 
 msgid "back_to_class"
 msgstr "Επιστροφή στην τάξη"
+
+msgid "background_information"
+msgstr ""
+
+msgid "background_information_info"
+msgstr ""
 
 msgid "become_a_sponsor"
 msgstr ""
 
 msgid "birth_year"
 msgstr "Έτος γέννησης"
+
+msgid "built_in"
+msgstr ""
+
+msgid "built_in_adventures"
+msgstr ""
 
 msgid "by"
 msgstr ""
@@ -413,7 +454,13 @@ msgstr ""
 msgid "configure"
 msgstr ""
 
+msgid "configure_class"
+msgstr ""
+
 msgid "configure_class_info"
+msgstr ""
+
+msgid "confirm"
 msgstr ""
 
 msgid "connect_guest_teacher"
@@ -423,6 +470,9 @@ msgid "constant_variable_role"
 msgstr ""
 
 msgid "containing"
+msgstr ""
+
+msgid "content"
 msgstr ""
 
 msgid "content_invalid"
@@ -518,6 +568,9 @@ msgstr "Δημιουργός"
 msgid "current_password"
 msgstr ""
 
+msgid "custom_adventures"
+msgstr ""
+
 msgid "customization_deleted"
 msgstr "Οι προσαρμογές διαγράφησαν με επιτυχία."
 
@@ -529,6 +582,9 @@ msgstr "Προσαρμογή περιπέτειας"
 
 msgid "customize_class"
 msgstr "Προσαρμογή της τάξης"
+
+msgid "customize_levels"
+msgstr ""
 
 msgid "danger_zone"
 msgstr ""
@@ -1033,6 +1089,9 @@ msgstr "Μια βαθμιαία γλώσσα προγραμματισμού"
 msgid "main_title"
 msgstr ""
 
+msgid "make_public"
+msgstr ""
+
 msgid "make_sure_you_are_done"
 msgstr ""
 
@@ -1043,6 +1102,9 @@ msgid "manage_students"
 msgstr ""
 
 msgid "manage_students_info"
+msgstr ""
+
+msgid "manual_out_of_date"
 msgstr ""
 
 msgid "more_adventures"
@@ -1123,7 +1185,16 @@ msgstr "Ακόμα χωρίς λογαριασμό;"
 msgid "no_accounts"
 msgstr "Δεν υπάρχουν λογαριασμοί για δημιουργία."
 
+msgid "no_adventures_in_level"
+msgstr ""
+
 msgid "no_adventures_yet"
+msgstr ""
+
+msgid "no_built_in_adventures_available"
+msgstr ""
+
+msgid "no_custom_adventures_available"
 msgstr ""
 
 msgid "no_existing_class"
@@ -1177,6 +1248,9 @@ msgstr ""
 
 msgid "not_teacher"
 msgstr "Φαίνεται πως δεν είσαι καθηγητής!"
+
+msgid "not_used_in_classes"
+msgstr ""
 
 msgid "number"
 msgstr "ένας αριθμός"
@@ -1304,10 +1378,13 @@ msgstr "Προτιμώμενη γλώσσα για τα keywords"
 msgid "preferred_language"
 msgstr "Προτιμώμενη γλώσσα"
 
+msgid "present"
+msgstr ""
+
 msgid "preview"
 msgstr "Προεπισκόπηση"
 
-msgid "preview_teacher_mode"
+msgid "preview_as_student"
 msgstr ""
 
 msgid "previewing_adventure"
@@ -1355,6 +1432,15 @@ msgstr ""
 
 msgid "program_header"
 msgstr "Τα προγράμματά μου"
+
+msgid "program_size_too_long"
+msgstr ""
+
+msgid "program_status_accepted"
+msgstr ""
+
+msgid "program_status_not_accepted"
+msgstr ""
 
 msgid "program_too_large_exception"
 msgstr ""
@@ -1406,6 +1492,9 @@ msgstr "Τα πρόσφατα προγράμματά μου"
 
 msgid "recover_password"
 msgstr "Ζήτησε επαναφορά συνθηματικού"
+
+msgid "reject_program"
+msgstr ""
 
 msgid "remove"
 msgstr "Αφαίρεση"
@@ -1504,12 +1593,18 @@ msgstr "Το πρόγραμμα αποθηκεύτηκε επιτυχώς"
 msgid "save_turtle_drawing"
 msgstr ""
 
+msgid "saving_language_failed"
+msgstr ""
+
 msgid "search"
 msgstr "Αναζήτηση..."
 
 #, fuzzy
 msgid "search_button"
 msgstr "Αποθήκευσε και μοιράσου κώδικα"
+
+msgid "search_results"
+msgstr ""
 
 msgid "second_teacher"
 msgstr ""
@@ -1562,10 +1657,19 @@ msgstr "Αυτή η πρόσκληση εστάλη από"
 msgid "sent_password_recovery"
 msgstr "Σύντομα θα λάβεις ένα email με οδηγίες για το πώς να επαναφέρεις το συνθηματικό σου."
 
+msgid "set_adventure_name"
+msgstr ""
+
 msgid "settings"
 msgstr "Οι προσωπικές μου ρυθμίσεις"
 
+msgid "settings_header"
+msgstr ""
+
 msgid "share_by_giving_link"
+msgstr ""
+
+msgid "share_with_teachers"
 msgstr ""
 
 msgid "share_your_program"
@@ -1587,6 +1691,9 @@ msgid "sleeping"
 msgstr ""
 
 msgid "slides"
+msgstr ""
+
+msgid "slides_card_info"
 msgstr ""
 
 msgid "slides_for_level"
@@ -1772,6 +1879,9 @@ msgstr ""
 "echo άρα το όνομά σου είναι\n"
 "</pre>"
 
+msgid "template_code_solution"
+msgstr ""
+
 msgid "this_adventure_has_an_example_solution"
 msgstr ""
 
@@ -1854,6 +1964,12 @@ msgid "translator"
 msgstr ""
 
 msgid "turned_into_teacher"
+msgstr ""
+
+msgid "unarchive"
+msgstr ""
+
+msgid "unarchive_class"
 msgstr ""
 
 msgid "unauthorized"
@@ -2645,4 +2761,16 @@ msgstr ""
 
 #~ msgid "facebook_page"
 #~ msgstr ""
+
+#~ msgid "view_teaching_materials_of_level"
+#~ msgstr ""
+
+#~ msgid "preview_teacher_mode"
+#~ msgstr ""
+
+#~ msgid "usage"
+#~ msgstr ""
+
+#~ msgid "adventure_exp_3"
+#~ msgstr "Μπορείς να χρησιμοποιήσεις το κουμπί \"προεπισκόπηση\" για να δεις μια στυλιζαρισμένη έκδοση της περιπέτειάς σου. Για να δεις την περιπέτεια σε μια ειδική σελίδα, επίλεξε \"προβολή\" από τη σελίδα καθηγητών."
 

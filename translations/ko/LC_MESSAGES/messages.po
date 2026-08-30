@@ -167,6 +167,9 @@ msgstr ""
 msgid "about_this_adventure"
 msgstr ""
 
+msgid "accept_program"
+msgstr ""
+
 #, fuzzy
 msgid "account_overview"
 msgstr "계정 개요"
@@ -180,11 +183,17 @@ msgstr ""
 msgid "add"
 msgstr ""
 
+msgid "add_adventures"
+msgstr ""
+
 #, fuzzy
 msgid "add_students"
 msgstr "학생 추가"
 
 msgid "add_your_language"
+msgstr ""
+
+msgid "additional_teachers"
 msgstr ""
 
 #, fuzzy
@@ -211,10 +220,6 @@ msgstr "당신은 이미 동일한 모험 이름을 사용하고 있습니다."
 #, fuzzy
 msgid "adventure_empty"
 msgstr "모험 이름을 입력하지 않으셨군요!"
-
-#, fuzzy
-msgid "adventure_exp_3"
-msgstr "키워드를 항상 {}(으)로 둘러싸야 합니다. 그러면 키워드가 올바르게 인식됩니다. 미리보기 버튼을 사용하여 모험의 스타일화된 버전을 볼 수 있습니다. 모험을 전용 페이지에서 보려면 선생님 페이지에서 \"보기\"를 선택합니다."
 
 msgid "adventure_exp_classes"
 msgstr ""
@@ -243,6 +248,9 @@ msgid "adventure_updated"
 msgstr "모험이 업데이트 되었습니다!"
 
 msgid "adventures"
+msgstr ""
+
+msgid "adventures_at_level"
 msgstr ""
 
 msgid "adventures_completed"
@@ -295,22 +303,49 @@ msgstr "계정이 이미 있으신가요?"
 msgid "already_program_running"
 msgstr "이미 실행 중인 프로그램이 있습니다. 먼저 프로그램을 끝내십시오."
 
+msgid "archive"
+msgstr ""
+
 msgid "archive_class"
+msgstr ""
+
+msgid "archived"
+msgstr ""
+
+msgid "archived_classes"
 msgstr ""
 
 #, fuzzy
 msgid "are_you_sure"
 msgstr "확실하신가요? 이 작업은 뒤로 되돌릴 수 없습니다."
 
+msgid "are_you_sure_soft"
+msgstr ""
+
 #, fuzzy
 msgid "ask_needs_var"
 msgstr "레벨 2부터 `{ask}`을(를) 변수와 함께 사용해야 합니다. 예: 이름 `{is}` `{ask}` 무엇이라고 부르십니까?"
 
+msgid "available"
+msgstr ""
+
+msgid "available_for_students"
+msgstr ""
+
 msgid "available_in"
+msgstr ""
+
+msgid "available_levels"
 msgstr ""
 
 msgid "back_to_class"
 msgstr "수업으로 돌아가기"
+
+msgid "background_information"
+msgstr ""
+
+msgid "background_information_info"
+msgstr ""
 
 #, fuzzy
 msgid "become_a_sponsor"
@@ -319,6 +354,12 @@ msgstr "후원자 되기"
 #, fuzzy
 msgid "birth_year"
 msgstr "출생년도"
+
+msgid "built_in"
+msgstr ""
+
+msgid "built_in_adventures"
+msgstr ""
 
 msgid "by"
 msgstr ""
@@ -442,7 +483,13 @@ msgstr "명령어"
 msgid "configure"
 msgstr ""
 
+msgid "configure_class"
+msgstr ""
+
 msgid "configure_class_info"
+msgstr ""
+
+msgid "confirm"
 msgstr ""
 
 msgid "connect_guest_teacher"
@@ -452,6 +499,9 @@ msgid "constant_variable_role"
 msgstr ""
 
 msgid "containing"
+msgstr ""
+
+msgid "content"
 msgstr ""
 
 #, fuzzy
@@ -564,6 +614,9 @@ msgstr "만든이"
 msgid "current_password"
 msgstr "현재비밀번호"
 
+msgid "custom_adventures"
+msgstr ""
+
 #, fuzzy
 msgid "customization_deleted"
 msgstr "사용자 지정을 성공적으로 삭제했습니다."
@@ -578,6 +631,9 @@ msgstr "모험 사용자 지정"
 #, fuzzy
 msgid "customize_class"
 msgstr "수업 사용자 정의"
+
+msgid "customize_levels"
+msgstr ""
 
 msgid "danger_zone"
 msgstr ""
@@ -1203,6 +1259,9 @@ msgstr "수업용 텍스트 프로그래밍"
 msgid "main_title"
 msgstr ""
 
+msgid "make_public"
+msgstr ""
+
 #, fuzzy
 msgid "make_sure_you_are_done"
 msgstr "완료했는지 확인하세요! \"핸드 인(Hand in)\"을 클릭한 후에는 프로그램을 더 이상 변경할 수 없습니다."
@@ -1215,6 +1274,9 @@ msgid "manage_students"
 msgstr ""
 
 msgid "manage_students_info"
+msgstr ""
+
+msgid "manual_out_of_date"
 msgstr ""
 
 msgid "more_adventures"
@@ -1296,7 +1358,16 @@ msgstr ""
 msgid "no_accounts"
 msgstr ""
 
+msgid "no_adventures_in_level"
+msgstr ""
+
 msgid "no_adventures_yet"
+msgstr ""
+
+msgid "no_built_in_adventures_available"
+msgstr ""
+
+msgid "no_custom_adventures_available"
 msgstr ""
 
 msgid "no_existing_class"
@@ -1348,6 +1419,9 @@ msgid "not_logged_in_handin"
 msgstr ""
 
 msgid "not_teacher"
+msgstr ""
+
+msgid "not_used_in_classes"
 msgstr ""
 
 msgid "number"
@@ -1476,10 +1550,13 @@ msgstr ""
 msgid "preferred_language"
 msgstr ""
 
+msgid "present"
+msgstr ""
+
 msgid "preview"
 msgstr ""
 
-msgid "preview_teacher_mode"
+msgid "preview_as_student"
 msgstr ""
 
 msgid "previewing_adventure"
@@ -1525,6 +1602,15 @@ msgid "program_contains_error"
 msgstr ""
 
 msgid "program_header"
+msgstr ""
+
+msgid "program_size_too_long"
+msgstr ""
+
+msgid "program_status_accepted"
+msgstr ""
+
+msgid "program_status_not_accepted"
 msgstr ""
 
 msgid "program_too_large_exception"
@@ -1577,6 +1663,9 @@ msgstr ""
 
 msgid "recover_password"
 msgstr "비밀번호의 초기화를 요청합니다"
+
+msgid "reject_program"
+msgstr ""
 
 msgid "remove"
 msgstr ""
@@ -1682,6 +1771,9 @@ msgstr "프로그램이 성공적으로 저장되었습니다."
 msgid "save_turtle_drawing"
 msgstr ""
 
+msgid "saving_language_failed"
+msgstr ""
+
 #, fuzzy
 msgid "search"
 msgstr "검색..."
@@ -1689,6 +1781,9 @@ msgstr "검색..."
 #, fuzzy
 msgid "search_button"
 msgstr "검색"
+
+msgid "search_results"
+msgstr ""
 
 msgid "second_teacher"
 msgstr ""
@@ -1748,13 +1843,22 @@ msgstr "이 초대장은 다음 사람에 의해 발송됩니다"
 msgid "sent_password_recovery"
 msgstr "비밀번호를 초기화 하는 방법에 대한 방법이 포함된 이메일을 곧 받으실 수 있습니다."
 
+msgid "set_adventure_name"
+msgstr ""
+
 #, fuzzy
 msgid "settings"
 msgstr "개인 정보 설정"
 
+msgid "settings_header"
+msgstr ""
+
 #, fuzzy
 msgid "share_by_giving_link"
 msgstr "다른 사용자에게 아래 링크를 제공하여 프로그램을 보여줍니다:"
+
+msgid "share_with_teachers"
+msgstr ""
 
 #, fuzzy
 msgid "share_your_program"
@@ -1779,6 +1883,9 @@ msgid "sleeping"
 msgstr ""
 
 msgid "slides"
+msgstr ""
+
+msgid "slides_card_info"
 msgstr ""
 
 msgid "slides_for_level"
@@ -1969,6 +2076,9 @@ msgstr ""
 "echo so your name is \n"
 "</pre>"
 
+msgid "template_code_solution"
+msgstr ""
+
 msgid "this_adventure_has_an_example_solution"
 msgstr ""
 
@@ -2063,6 +2173,12 @@ msgid "translator"
 msgstr ""
 
 msgid "turned_into_teacher"
+msgstr ""
+
+msgid "unarchive"
+msgstr ""
+
+msgid "unarchive_class"
 msgstr ""
 
 msgid "unauthorized"
@@ -2673,4 +2789,16 @@ msgstr ""
 
 #~ msgid "facebook_page"
 #~ msgstr ""
+
+#~ msgid "view_teaching_materials_of_level"
+#~ msgstr ""
+
+#~ msgid "preview_teacher_mode"
+#~ msgstr ""
+
+#~ msgid "usage"
+#~ msgstr ""
+
+#~ msgid "adventure_exp_3"
+#~ msgstr "키워드를 항상 {}(으)로 둘러싸야 합니다. 그러면 키워드가 올바르게 인식됩니다. 미리보기 버튼을 사용하여 모험의 스타일화된 버전을 볼 수 있습니다. 모험을 전용 페이지에서 보려면 선생님 페이지에서 \"보기\"를 선택합니다."
 

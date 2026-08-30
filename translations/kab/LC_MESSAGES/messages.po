@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-06-26 16:04+0200\n"
-"PO-Revision-Date: 2026-02-02 19:46+0000\n"
-"Last-Translator: Annelies Vlaar <Annelies_Vlaar@hotmail.com>\n"
+"PO-Revision-Date: 2026-08-13 00:50+0000\n"
+"Last-Translator: Moonshadow <moonshadow@users.noreply.hosted.weblate.org>\n"
 "Language-Team: none\n"
 "Language: kab\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 "Generated-By: Babel 2.14.0\n"
 
 msgid "Access Before Assign"
@@ -151,6 +151,9 @@ msgstr ""
 msgid "about_this_adventure"
 msgstr ""
 
+msgid "accept_program"
+msgstr ""
+
 msgid "account_overview"
 msgstr "Taskant n umaɣnu"
 
@@ -163,11 +166,17 @@ msgstr ""
 msgid "add"
 msgstr "Rnu"
 
+msgid "add_adventures"
+msgstr ""
+
 msgid "add_students"
 msgstr "Rnu inelmaden"
 
 msgid "add_your_language"
 msgstr "Rnu tutlayt-ik!"
+
+msgid "additional_teachers"
+msgstr ""
 
 msgid "admin"
 msgstr "Anedbal"
@@ -178,6 +187,7 @@ msgstr "Tadyant"
 msgid "adventure_cloned"
 msgstr ""
 
+#, fuzzy
 msgid "adventure_code_button"
 msgstr "Tangalt n tedyant"
 
@@ -188,9 +198,6 @@ msgid "adventure_duplicate"
 msgstr ""
 
 msgid "adventure_empty"
-msgstr ""
-
-msgid "adventure_exp_3"
 msgstr ""
 
 msgid "adventure_exp_classes"
@@ -216,6 +223,9 @@ msgstr "Tadyant tettwaleqqem!"
 
 msgid "adventures"
 msgstr "Tidyanin"
+
+msgid "adventures_at_level"
+msgstr ""
 
 msgid "adventures_completed"
 msgstr "Tidyanin mmdent: {number_of_adventures}"
@@ -259,26 +269,59 @@ msgstr "Tesɛiḍ yakan amaɣnu?"
 msgid "already_program_running"
 msgstr "La yettwaselkam yakan wahil, fakk qbel wagi."
 
+msgid "archive"
+msgstr ""
+
 msgid "archive_class"
+msgstr ""
+
+msgid "archived"
+msgstr ""
+
+msgid "archived_classes"
 msgstr ""
 
 msgid "are_you_sure"
 msgstr "D tidet tebɣiḍ? Ur tezmireḍ ara ad tesfesxeḍ tigawt-a."
 
+msgid "are_you_sure_soft"
+msgstr ""
+
 msgid "ask_needs_var"
 msgstr "Seg uswir wis 2, {ask} yesra ad yettwaseqdac akked umutti. Amedya: isem`{is}` `{ask}`Isem-ik?"
+
+msgid "available"
+msgstr ""
+
+msgid "available_for_students"
+msgstr ""
 
 msgid "available_in"
 msgstr "Yella deg:"
 
+msgid "available_levels"
+msgstr ""
+
 msgid "back_to_class"
 msgstr "Ûɣal ɣer usmil"
+
+msgid "background_information"
+msgstr ""
+
+msgid "background_information_info"
+msgstr ""
 
 msgid "become_a_sponsor"
 msgstr "Uɣal d amendad"
 
 msgid "birth_year"
 msgstr "Aseggas n tlalit"
+
+msgid "built_in"
+msgstr ""
+
+msgid "built_in_adventures"
+msgstr ""
 
 msgid "by"
 msgstr "sɣur"
@@ -388,7 +431,13 @@ msgstr "Tiludna"
 msgid "configure"
 msgstr ""
 
+msgid "configure_class"
+msgstr ""
+
 msgid "configure_class_info"
+msgstr ""
+
+msgid "confirm"
 msgstr ""
 
 msgid "connect_guest_teacher"
@@ -398,6 +447,9 @@ msgid "constant_variable_role"
 msgstr "yezga"
 
 msgid "containing"
+msgstr ""
+
+msgid "content"
 msgstr ""
 
 msgid "content_invalid"
@@ -493,6 +545,9 @@ msgstr "Asaraw"
 msgid "current_password"
 msgstr "Awal n uɛeddi amiran"
 
+msgid "custom_adventures"
+msgstr ""
+
 msgid "customization_deleted"
 msgstr "Isenfal ttwasefḍen akken iwata."
 
@@ -504,6 +559,9 @@ msgstr "Sagen tadyant"
 
 msgid "customize_class"
 msgstr "Sagen asmil"
+
+msgid "customize_levels"
+msgstr ""
 
 msgid "danger_zone"
 msgstr ""
@@ -991,6 +1049,9 @@ msgstr "Asihel aḍrisan i usmil"
 msgid "main_title"
 msgstr "Hedy"
 
+msgid "make_public"
+msgstr ""
+
 msgid "make_sure_you_are_done"
 msgstr ""
 
@@ -1001,6 +1062,9 @@ msgid "manage_students"
 msgstr ""
 
 msgid "manage_students_info"
+msgstr ""
+
+msgid "manual_out_of_date"
 msgstr ""
 
 msgid "more_adventures"
@@ -1081,9 +1145,18 @@ msgstr "Mazal ur tesɛiḍ ara amiḍan?"
 msgid "no_accounts"
 msgstr "Ulac amiḍan ara yettwarnun."
 
+msgid "no_adventures_in_level"
+msgstr ""
+
 #, fuzzy
 msgid "no_adventures_yet"
 msgstr "Ulac tidyanin tizayazin akka tura..."
+
+msgid "no_built_in_adventures_available"
+msgstr ""
+
+msgid "no_custom_adventures_available"
+msgstr ""
 
 msgid "no_existing_class"
 msgstr ""
@@ -1135,6 +1208,9 @@ msgstr ""
 
 msgid "not_teacher"
 msgstr "Akka d-yettban kečč mačči d aselmad!"
+
+msgid "not_used_in_classes"
+msgstr ""
 
 msgid "number"
 msgstr "aṭṭun"
@@ -1262,11 +1338,14 @@ msgstr ""
 msgid "preferred_language"
 msgstr "Tutlayt tufrint"
 
+msgid "present"
+msgstr ""
+
 msgid "preview"
 msgstr "Taskant"
 
-msgid "preview_teacher_mode"
-msgstr "Amiḍan-a inek i wakken ad tɛerḍeḍ Hedy, ẓer belli ilaq-ak ad teffɣeḍ syen ad tesnulfuḍ amiḍan n tidet i usekles n ukala-k."
+msgid "preview_as_student"
+msgstr ""
 
 msgid "previewing_adventure"
 msgstr "Asenqed n tedyant"
@@ -1312,6 +1391,15 @@ msgstr "Ahil-a deg-s tuccḍa, d tidet tebɣiḍ ad t-tebḍuḍ?"
 
 msgid "program_header"
 msgstr "Ihalan-iw"
+
+msgid "program_size_too_long"
+msgstr ""
+
+msgid "program_status_accepted"
+msgstr ""
+
+msgid "program_status_not_accepted"
+msgstr ""
 
 msgid "program_too_large_exception"
 msgstr "Ihalan meqqren aṭas"
@@ -1362,6 +1450,9 @@ msgid "recent"
 msgstr "Ihalan-iw imiranen"
 
 msgid "recover_password"
+msgstr ""
+
+msgid "reject_program"
 msgstr ""
 
 msgid "remove"
@@ -1460,11 +1551,17 @@ msgstr "Ahil yettwasekles akken iwata."
 msgid "save_turtle_drawing"
 msgstr ""
 
+msgid "saving_language_failed"
+msgstr ""
+
 msgid "search"
 msgstr "Nadi..."
 
 msgid "search_button"
 msgstr "Nadi"
+
+msgid "search_results"
+msgstr ""
 
 msgid "second_teacher"
 msgstr "Aselmad wis sin"
@@ -1517,11 +1614,20 @@ msgstr "Tinnubga-a tettwazen-d sɣur"
 msgid "sent_password_recovery"
 msgstr "Ad teṭṭfeḍ imayl anida ara d-ddun iwellihen ɣef wamek ara twennzeḍ awal n uɛeddi."
 
+msgid "set_adventure_name"
+msgstr ""
+
 msgid "settings"
 msgstr "Iɣewwaren-inu"
 
+msgid "settings_header"
+msgstr ""
+
 msgid "share_by_giving_link"
 msgstr "Sken ahil-ik i yimdanen niḍen s tikci n useɣwen-a:"
+
+msgid "share_with_teachers"
+msgstr ""
 
 msgid "share_your_program"
 msgstr "Bḍu ahil-ik"
@@ -1543,6 +1649,9 @@ msgstr "Iḍes..."
 
 msgid "slides"
 msgstr "Tibursatin"
+
+msgid "slides_card_info"
+msgstr ""
 
 msgid "slides_for_level"
 msgstr "Tibursatin i uswir"
@@ -1713,6 +1822,7 @@ msgstr ""
 msgid "teaching_materials_info"
 msgstr ""
 
+#, fuzzy
 msgid "template_code"
 msgstr ""
 "Wagi d asegzu n tedyant-iw!\n"
@@ -1724,6 +1834,9 @@ msgstr ""
 "ssuter Isem-ik?\n"
 "echo isem-ik \n"
 "</pre>"
+
+msgid "template_code_solution"
+msgstr ""
 
 msgid "this_adventure_has_an_example_solution"
 msgstr ""
@@ -1807,6 +1920,12 @@ msgid "translator"
 msgstr "Amsuqel"
 
 msgid "turned_into_teacher"
+msgstr ""
+
+msgid "unarchive"
+msgstr ""
+
+msgid "unarchive_class"
 msgstr ""
 
 msgid "unauthorized"
@@ -2208,5 +2327,17 @@ msgstr "Ahil-ik·im"
 #~ msgstr ""
 
 #~ msgid "facebook_page"
+#~ msgstr ""
+
+#~ msgid "view_teaching_materials_of_level"
+#~ msgstr ""
+
+#~ msgid "preview_teacher_mode"
+#~ msgstr "Amiḍan-a inek i wakken ad tɛerḍeḍ Hedy, ẓer belli ilaq-ak ad teffɣeḍ syen ad tesnulfuḍ amiḍan n tidet i usekles n ukala-k."
+
+#~ msgid "usage"
+#~ msgstr ""
+
+#~ msgid "adventure_exp_3"
 #~ msgstr ""
 

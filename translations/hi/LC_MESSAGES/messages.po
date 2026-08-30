@@ -174,6 +174,9 @@ msgstr ""
 msgid "about_this_adventure"
 msgstr ""
 
+msgid "accept_program"
+msgstr ""
+
 msgid "account_overview"
 msgstr "खाता निरीक्षण"
 
@@ -186,11 +189,17 @@ msgstr ""
 msgid "add"
 msgstr ""
 
+msgid "add_adventures"
+msgstr ""
+
 #, fuzzy
 msgid "add_students"
 msgstr "छात्र"
 
 msgid "add_your_language"
+msgstr ""
+
+msgid "additional_teachers"
 msgstr ""
 
 msgid "admin"
@@ -214,10 +223,6 @@ msgstr "आपके पास पहले से ही इस नाम क�
 msgid "adventure_empty"
 msgstr "आपने एक adventure नाम दर्ज नहीं किया!"
 
-#, fuzzy
-msgid "adventure_exp_3"
-msgstr "आप अपने रोमांच का स्टाइल संस्करण देखने के लिए \"पूर्वावलोकन\" बटन का उपयोग कर सकते हैं। रोमांच को एक समर्पित पृष्ठ पर देखने के लिए, शिक्षक पृष्ठ से \"दृश्य\" चुनें।"
-
 msgid "adventure_exp_classes"
 msgstr ""
 
@@ -240,6 +245,9 @@ msgid "adventure_updated"
 msgstr "adventure अद्यतन किया गया है!"
 
 msgid "adventures"
+msgstr ""
+
+msgid "adventures_at_level"
 msgstr ""
 
 msgid "adventures_completed"
@@ -286,27 +294,60 @@ msgstr "पहले से ही एक खाता है?"
 msgid "already_program_running"
 msgstr "प्रोग्रामिंग शुरू करें"
 
+msgid "archive"
+msgstr ""
+
 msgid "archive_class"
+msgstr ""
+
+msgid "archived"
+msgstr ""
+
+msgid "archived_classes"
 msgstr ""
 
 msgid "are_you_sure"
 msgstr "क्या आपको यकीन है? आप इस क्रिया को लौटा नहीं सकते| "
 
+msgid "are_you_sure_soft"
+msgstr ""
+
 #, fuzzy
 msgid "ask_needs_var"
 msgstr "स्तर 2 से शुरू होकर, ask को एक variable के साथ उपयोग करने की आवश्यकता है। उदाहरण: name is ask आपको क्या कहा जाता है?"
 
+msgid "available"
+msgstr ""
+
+msgid "available_for_students"
+msgstr ""
+
 msgid "available_in"
+msgstr ""
+
+msgid "available_levels"
 msgstr ""
 
 msgid "back_to_class"
 msgstr "कक्षा में वापस जाएं"
+
+msgid "background_information"
+msgstr ""
+
+msgid "background_information_info"
+msgstr ""
 
 msgid "become_a_sponsor"
 msgstr ""
 
 msgid "birth_year"
 msgstr "जन्म वर्ष"
+
+msgid "built_in"
+msgstr ""
+
+msgid "built_in_adventures"
+msgstr ""
 
 msgid "by"
 msgstr "से"
@@ -417,7 +458,13 @@ msgstr ""
 msgid "configure"
 msgstr ""
 
+msgid "configure_class"
+msgstr ""
+
 msgid "configure_class_info"
+msgstr ""
+
+msgid "confirm"
 msgstr ""
 
 msgid "connect_guest_teacher"
@@ -427,6 +474,9 @@ msgid "constant_variable_role"
 msgstr ""
 
 msgid "containing"
+msgstr ""
+
+msgid "content"
 msgstr ""
 
 msgid "content_invalid"
@@ -524,6 +574,9 @@ msgstr "बनाने वाला"
 msgid "current_password"
 msgstr ""
 
+msgid "custom_adventures"
+msgstr ""
+
 msgid "customization_deleted"
 msgstr "अनुकूलन सफलतापूर्वक हटा दिए गए।"
 
@@ -535,6 +588,9 @@ msgstr "adventures अनुकूलित करें"
 
 msgid "customize_class"
 msgstr "कक्षा को अनुकूलित करें"
+
+msgid "customize_levels"
+msgstr ""
 
 msgid "danger_zone"
 msgstr ""
@@ -1042,6 +1098,9 @@ msgstr "्रस्तुत प्रोग्राम "
 msgid "main_title"
 msgstr "शीर्षक"
 
+msgid "make_public"
+msgstr ""
+
 msgid "make_sure_you_are_done"
 msgstr ""
 
@@ -1052,6 +1111,9 @@ msgid "manage_students"
 msgstr ""
 
 msgid "manage_students_info"
+msgstr ""
+
+msgid "manual_out_of_date"
 msgstr ""
 
 msgid "more_adventures"
@@ -1132,7 +1194,16 @@ msgstr "अभी तक कोई खाता नहीं?"
 msgid "no_accounts"
 msgstr ""
 
+msgid "no_adventures_in_level"
+msgstr ""
+
 msgid "no_adventures_yet"
+msgstr ""
+
+msgid "no_built_in_adventures_available"
+msgstr ""
+
+msgid "no_custom_adventures_available"
 msgstr ""
 
 msgid "no_existing_class"
@@ -1186,6 +1257,9 @@ msgstr ""
 
 msgid "not_teacher"
 msgstr "लगता है आप शिक्षक नहीं हैं!"
+
+msgid "not_used_in_classes"
+msgstr ""
 
 msgid "number"
 msgstr "एक संख्या"
@@ -1313,10 +1387,13 @@ msgstr ""
 msgid "preferred_language"
 msgstr "पसंदीदा भाषा"
 
+msgid "present"
+msgstr ""
+
 msgid "preview"
 msgstr "पूर्वावलोकन"
 
-msgid "preview_teacher_mode"
+msgid "preview_as_student"
 msgstr ""
 
 msgid "previewing_adventure"
@@ -1364,6 +1441,15 @@ msgstr ""
 
 msgid "program_header"
 msgstr "मेरे प्रोग्राम्स"
+
+msgid "program_size_too_long"
+msgstr ""
+
+msgid "program_status_accepted"
+msgstr ""
+
+msgid "program_status_not_accepted"
+msgstr ""
 
 msgid "program_too_large_exception"
 msgstr ""
@@ -1415,6 +1501,9 @@ msgstr "मेरे हाल के प्रोग्राम्स"
 
 msgid "recover_password"
 msgstr "सांकेतिक शब्द को फिर से कायम करने अनुरोध करें"
+
+msgid "reject_program"
+msgstr ""
 
 msgid "remove"
 msgstr "हटा दें"
@@ -1513,12 +1602,18 @@ msgstr "प्रोग्राम सफलतापूर्वक सहे�
 msgid "save_turtle_drawing"
 msgstr ""
 
+msgid "saving_language_failed"
+msgstr ""
+
 msgid "search"
 msgstr "ढूंढें..."
 
 #, fuzzy
 msgid "search_button"
 msgstr "कोड को सहेजें और साझा करें"
+
+msgid "search_results"
+msgstr ""
 
 msgid "second_teacher"
 msgstr ""
@@ -1571,10 +1666,19 @@ msgstr "यह आमंत्रण इनके द्वारा भेज�
 msgid "sent_password_recovery"
 msgstr "आपको जल्द ही अपना सांकेतिक शब्द फिर से कायम करने के निर्देशों के साथ एक ईमेल प्राप्त होना चाहिए|"
 
+msgid "set_adventure_name"
+msgstr ""
+
 msgid "settings"
 msgstr "ेरी व्यक्तिगत सेटिंग"
 
+msgid "settings_header"
+msgstr ""
+
 msgid "share_by_giving_link"
+msgstr ""
+
+msgid "share_with_teachers"
 msgstr ""
 
 msgid "share_your_program"
@@ -1596,6 +1700,9 @@ msgid "sleeping"
 msgstr ""
 
 msgid "slides"
+msgstr ""
+
+msgid "slides_card_info"
 msgstr ""
 
 msgid "slides_for_level"
@@ -1786,6 +1893,9 @@ msgstr ""
 "echo so your name is \n"
 "</pre>"
 
+msgid "template_code_solution"
+msgstr ""
+
 msgid "this_adventure_has_an_example_solution"
 msgstr ""
 
@@ -1869,6 +1979,12 @@ msgid "translator"
 msgstr ""
 
 msgid "turned_into_teacher"
+msgstr ""
+
+msgid "unarchive"
+msgstr ""
+
+msgid "unarchive_class"
 msgstr ""
 
 msgid "unauthorized"
@@ -2649,4 +2765,16 @@ msgstr ""
 
 #~ msgid "facebook_page"
 #~ msgstr ""
+
+#~ msgid "view_teaching_materials_of_level"
+#~ msgstr ""
+
+#~ msgid "preview_teacher_mode"
+#~ msgstr ""
+
+#~ msgid "usage"
+#~ msgstr ""
+
+#~ msgid "adventure_exp_3"
+#~ msgstr "आप अपने रोमांच का स्टाइल संस्करण देखने के लिए \"पूर्वावलोकन\" बटन का उपयोग कर सकते हैं। रोमांच को एक समर्पित पृष्ठ पर देखने के लिए, शिक्षक पृष्ठ से \"दृश्य\" चुनें।"
 

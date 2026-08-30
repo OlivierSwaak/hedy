@@ -153,6 +153,9 @@ msgstr ""
 msgid "about_this_adventure"
 msgstr ""
 
+msgid "accept_program"
+msgstr ""
+
 msgid "account_overview"
 msgstr ""
 
@@ -165,10 +168,16 @@ msgstr ""
 msgid "add"
 msgstr ""
 
+msgid "add_adventures"
+msgstr ""
+
 msgid "add_students"
 msgstr ""
 
 msgid "add_your_language"
+msgstr ""
+
+msgid "additional_teachers"
 msgstr ""
 
 msgid "admin"
@@ -190,9 +199,6 @@ msgid "adventure_duplicate"
 msgstr ""
 
 msgid "adventure_empty"
-msgstr ""
-
-msgid "adventure_exp_3"
 msgstr ""
 
 msgid "adventure_exp_classes"
@@ -217,6 +223,9 @@ msgid "adventure_updated"
 msgstr ""
 
 msgid "adventures"
+msgstr ""
+
+msgid "adventures_at_level"
 msgstr ""
 
 msgid "adventures_completed"
@@ -261,25 +270,58 @@ msgstr ""
 msgid "already_program_running"
 msgstr ""
 
+msgid "archive"
+msgstr ""
+
 msgid "archive_class"
+msgstr ""
+
+msgid "archived"
+msgstr ""
+
+msgid "archived_classes"
 msgstr ""
 
 msgid "are_you_sure"
 msgstr ""
 
+msgid "are_you_sure_soft"
+msgstr ""
+
 msgid "ask_needs_var"
+msgstr ""
+
+msgid "available"
+msgstr ""
+
+msgid "available_for_students"
 msgstr ""
 
 msgid "available_in"
 msgstr ""
 
+msgid "available_levels"
+msgstr ""
+
 msgid "back_to_class"
+msgstr ""
+
+msgid "background_information"
+msgstr ""
+
+msgid "background_information_info"
 msgstr ""
 
 msgid "become_a_sponsor"
 msgstr ""
 
 msgid "birth_year"
+msgstr ""
+
+msgid "built_in"
+msgstr ""
+
+msgid "built_in_adventures"
 msgstr ""
 
 msgid "by"
@@ -390,7 +432,13 @@ msgstr ""
 msgid "configure"
 msgstr ""
 
+msgid "configure_class"
+msgstr ""
+
 msgid "configure_class_info"
+msgstr ""
+
+msgid "confirm"
 msgstr ""
 
 msgid "connect_guest_teacher"
@@ -400,6 +448,9 @@ msgid "constant_variable_role"
 msgstr ""
 
 msgid "containing"
+msgstr ""
+
+msgid "content"
 msgstr ""
 
 msgid "content_invalid"
@@ -495,6 +546,9 @@ msgstr ""
 msgid "current_password"
 msgstr ""
 
+msgid "custom_adventures"
+msgstr ""
+
 msgid "customization_deleted"
 msgstr ""
 
@@ -505,6 +559,9 @@ msgid "customize_adventure"
 msgstr ""
 
 msgid "customize_class"
+msgstr ""
+
+msgid "customize_levels"
 msgstr ""
 
 msgid "danger_zone"
@@ -987,6 +1044,9 @@ msgstr ""
 msgid "main_title"
 msgstr ""
 
+msgid "make_public"
+msgstr ""
+
 msgid "make_sure_you_are_done"
 msgstr ""
 
@@ -997,6 +1057,9 @@ msgid "manage_students"
 msgstr ""
 
 msgid "manage_students_info"
+msgstr ""
+
+msgid "manual_out_of_date"
 msgstr ""
 
 msgid "more_adventures"
@@ -1077,7 +1140,16 @@ msgstr ""
 msgid "no_accounts"
 msgstr ""
 
+msgid "no_adventures_in_level"
+msgstr ""
+
 msgid "no_adventures_yet"
+msgstr ""
+
+msgid "no_built_in_adventures_available"
+msgstr ""
+
+msgid "no_custom_adventures_available"
 msgstr ""
 
 msgid "no_existing_class"
@@ -1129,6 +1201,9 @@ msgid "not_logged_in_handin"
 msgstr ""
 
 msgid "not_teacher"
+msgstr ""
+
+msgid "not_used_in_classes"
 msgstr ""
 
 msgid "number"
@@ -1257,10 +1332,13 @@ msgstr ""
 msgid "preferred_language"
 msgstr ""
 
+msgid "present"
+msgstr ""
+
 msgid "preview"
 msgstr ""
 
-msgid "preview_teacher_mode"
+msgid "preview_as_student"
 msgstr ""
 
 msgid "previewing_adventure"
@@ -1306,6 +1384,15 @@ msgid "program_contains_error"
 msgstr ""
 
 msgid "program_header"
+msgstr ""
+
+msgid "program_size_too_long"
+msgstr ""
+
+msgid "program_status_accepted"
+msgstr ""
+
+msgid "program_status_not_accepted"
 msgstr ""
 
 msgid "program_too_large_exception"
@@ -1357,6 +1444,9 @@ msgid "recent"
 msgstr ""
 
 msgid "recover_password"
+msgstr ""
+
+msgid "reject_program"
 msgstr ""
 
 msgid "remove"
@@ -1455,10 +1545,16 @@ msgstr ""
 msgid "save_turtle_drawing"
 msgstr ""
 
+msgid "saving_language_failed"
+msgstr ""
+
 msgid "search"
 msgstr ""
 
 msgid "search_button"
+msgstr ""
+
+msgid "search_results"
 msgstr ""
 
 msgid "second_teacher"
@@ -1512,10 +1608,19 @@ msgstr ""
 msgid "sent_password_recovery"
 msgstr ""
 
+msgid "set_adventure_name"
+msgstr ""
+
 msgid "settings"
 msgstr ""
 
+msgid "settings_header"
+msgstr ""
+
 msgid "share_by_giving_link"
+msgstr ""
+
+msgid "share_with_teachers"
 msgstr ""
 
 msgid "share_your_program"
@@ -1537,6 +1642,9 @@ msgid "sleeping"
 msgstr ""
 
 msgid "slides"
+msgstr ""
+
+msgid "slides_card_info"
 msgstr ""
 
 msgid "slides_for_level"
@@ -1710,6 +1818,9 @@ msgstr ""
 msgid "template_code"
 msgstr ""
 
+msgid "template_code_solution"
+msgstr ""
+
 msgid "this_adventure_has_an_example_solution"
 msgstr ""
 
@@ -1792,6 +1903,12 @@ msgid "translator"
 msgstr ""
 
 msgid "turned_into_teacher"
+msgstr ""
+
+msgid "unarchive"
+msgstr ""
+
+msgid "unarchive_class"
 msgstr ""
 
 msgid "unauthorized"
@@ -2332,5 +2449,17 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "facebook_page"
+#~ msgstr ""
+
+#~ msgid "view_teaching_materials_of_level"
+#~ msgstr ""
+
+#~ msgid "preview_teacher_mode"
+#~ msgstr ""
+
+#~ msgid "usage"
+#~ msgstr ""
+
+#~ msgid "adventure_exp_3"
 #~ msgstr ""
 

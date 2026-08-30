@@ -171,6 +171,9 @@ msgstr ""
 msgid "about_this_adventure"
 msgstr ""
 
+msgid "accept_program"
+msgstr ""
+
 msgid "account_overview"
 msgstr "Kontooversikt"
 
@@ -183,11 +186,17 @@ msgstr ""
 msgid "add"
 msgstr ""
 
+msgid "add_adventures"
+msgstr ""
+
 #, fuzzy
 msgid "add_students"
 msgstr "elever"
 
 msgid "add_your_language"
+msgstr ""
+
+msgid "additional_teachers"
 msgstr ""
 
 msgid "admin"
@@ -211,10 +220,6 @@ msgstr "Du har allerede et eventyr med dette navnet."
 msgid "adventure_empty"
 msgstr "Du skrev ikke noe navn på eventyret!"
 
-#, fuzzy
-msgid "adventure_exp_3"
-msgstr "Du kan bruke \"forhåndsvis\" knappen til å se en stilert versjon av eventyret ditt. For å se eventyret på en egen side, velg \"vis\" fra lærersiden."
-
 msgid "adventure_exp_classes"
 msgstr ""
 
@@ -237,6 +242,9 @@ msgid "adventure_updated"
 msgstr "Eventyret har blitt oppdatert!"
 
 msgid "adventures"
+msgstr ""
+
+msgid "adventures_at_level"
 msgstr ""
 
 msgid "adventures_completed"
@@ -282,27 +290,60 @@ msgstr "Har du allerede en konto?"
 msgid "already_program_running"
 msgstr "Begynn å programmere"
 
+msgid "archive"
+msgstr ""
+
 msgid "archive_class"
+msgstr ""
+
+msgid "archived"
+msgstr ""
+
+msgid "archived_classes"
 msgstr ""
 
 msgid "are_you_sure"
 msgstr "Er du sikker? Du kan ikke angre på denne handlingen."
 
+msgid "are_you_sure_soft"
+msgstr ""
+
 #, fuzzy
 msgid "ask_needs_var"
 msgstr "Fra nivå 2, må du lagre svaret fra spør-kommandoen i en variabel spørsmålet inni apostrofer. For eksempel: navn er spør Hva heter du?"
 
+msgid "available"
+msgstr ""
+
+msgid "available_for_students"
+msgstr ""
+
 msgid "available_in"
+msgstr ""
+
+msgid "available_levels"
 msgstr ""
 
 msgid "back_to_class"
 msgstr "Gå tilbake til klassen"
+
+msgid "background_information"
+msgstr ""
+
+msgid "background_information_info"
+msgstr ""
 
 msgid "become_a_sponsor"
 msgstr ""
 
 msgid "birth_year"
 msgstr "Fødselsår"
+
+msgid "built_in"
+msgstr ""
+
+msgid "built_in_adventures"
+msgstr ""
 
 msgid "by"
 msgstr "av"
@@ -412,7 +453,13 @@ msgstr ""
 msgid "configure"
 msgstr ""
 
+msgid "configure_class"
+msgstr ""
+
 msgid "configure_class_info"
+msgstr ""
+
+msgid "confirm"
 msgstr ""
 
 msgid "connect_guest_teacher"
@@ -422,6 +469,9 @@ msgid "constant_variable_role"
 msgstr ""
 
 msgid "containing"
+msgstr ""
+
+msgid "content"
 msgstr ""
 
 msgid "content_invalid"
@@ -517,6 +567,9 @@ msgstr "Skaper"
 msgid "current_password"
 msgstr ""
 
+msgid "custom_adventures"
+msgstr ""
+
 msgid "customization_deleted"
 msgstr "Tilpassningene ble slettet."
 
@@ -528,6 +581,9 @@ msgstr "Tilpass eventyr"
 
 msgid "customize_class"
 msgstr "Tilpass innstillingene for klassen"
+
+msgid "customize_levels"
+msgstr ""
 
 msgid "danger_zone"
 msgstr ""
@@ -1036,6 +1092,9 @@ msgstr "Et gradvis programmeringsspråk"
 msgid "main_title"
 msgstr ""
 
+msgid "make_public"
+msgstr ""
+
 msgid "make_sure_you_are_done"
 msgstr ""
 
@@ -1046,6 +1105,9 @@ msgid "manage_students"
 msgstr ""
 
 msgid "manage_students_info"
+msgstr ""
+
+msgid "manual_out_of_date"
 msgstr ""
 
 msgid "more_adventures"
@@ -1126,7 +1188,16 @@ msgstr "Ingen konto?"
 msgid "no_accounts"
 msgstr "Det er ingen oppgitte kontoer å opprette."
 
+msgid "no_adventures_in_level"
+msgstr ""
+
 msgid "no_adventures_yet"
+msgstr ""
+
+msgid "no_built_in_adventures_available"
+msgstr ""
+
+msgid "no_custom_adventures_available"
 msgstr ""
 
 msgid "no_existing_class"
@@ -1180,6 +1251,9 @@ msgstr ""
 
 msgid "not_teacher"
 msgstr "Ser ut til at du ikke er en lærer!"
+
+msgid "not_used_in_classes"
+msgstr ""
 
 msgid "number"
 msgstr "et tall"
@@ -1307,10 +1381,13 @@ msgstr "Fortrukket språk for nøkkelord"
 msgid "preferred_language"
 msgstr "Foretrukket språk"
 
+msgid "present"
+msgstr ""
+
 msgid "preview"
 msgstr "Forhåndsvis"
 
-msgid "preview_teacher_mode"
+msgid "preview_as_student"
 msgstr ""
 
 msgid "previewing_adventure"
@@ -1358,6 +1435,15 @@ msgstr "Dette programmet inneholder en feil, er du sikker på at du vil dele det
 
 msgid "program_header"
 msgstr "Mine programmer"
+
+msgid "program_size_too_long"
+msgstr ""
+
+msgid "program_status_accepted"
+msgstr ""
+
+msgid "program_status_not_accepted"
+msgstr ""
 
 msgid "program_too_large_exception"
 msgstr ""
@@ -1409,6 +1495,9 @@ msgstr "Mine siste programmer"
 
 msgid "recover_password"
 msgstr "Be om at passordet tilbakestilles"
+
+msgid "reject_program"
+msgstr ""
 
 msgid "remove"
 msgstr "Fjern"
@@ -1506,10 +1595,16 @@ msgstr "Programmet ble lagret."
 msgid "save_turtle_drawing"
 msgstr ""
 
+msgid "saving_language_failed"
+msgstr ""
+
 msgid "search"
 msgstr "Søk..."
 
 msgid "search_button"
+msgstr ""
+
+msgid "search_results"
 msgstr ""
 
 msgid "second_teacher"
@@ -1563,10 +1658,19 @@ msgstr "Invitasjonen ble sendt av"
 msgid "sent_password_recovery"
 msgstr "Du vil snart motta en e-post med instruks for tilbakestilling av passordet ditt."
 
+msgid "set_adventure_name"
+msgstr ""
+
 msgid "settings"
 msgstr "Mine personlige innstillinger"
 
+msgid "settings_header"
+msgstr ""
+
 msgid "share_by_giving_link"
+msgstr ""
+
+msgid "share_with_teachers"
 msgstr ""
 
 msgid "share_your_program"
@@ -1588,6 +1692,9 @@ msgid "sleeping"
 msgstr ""
 
 msgid "slides"
+msgstr ""
+
+msgid "slides_card_info"
 msgstr ""
 
 msgid "slides_for_level"
@@ -1773,6 +1880,9 @@ msgstr ""
 "ekko så navnet ditt er\n"
 "</pre>"
 
+msgid "template_code_solution"
+msgstr ""
+
 msgid "this_adventure_has_an_example_solution"
 msgstr ""
 
@@ -1855,6 +1965,12 @@ msgid "translator"
 msgstr ""
 
 msgid "turned_into_teacher"
+msgstr ""
+
+msgid "unarchive"
+msgstr ""
+
+msgid "unarchive_class"
 msgstr ""
 
 msgid "unauthorized"
@@ -2637,4 +2753,16 @@ msgstr ""
 
 #~ msgid "facebook_page"
 #~ msgstr ""
+
+#~ msgid "view_teaching_materials_of_level"
+#~ msgstr ""
+
+#~ msgid "preview_teacher_mode"
+#~ msgstr ""
+
+#~ msgid "usage"
+#~ msgstr ""
+
+#~ msgid "adventure_exp_3"
+#~ msgstr "Du kan bruke \"forhåndsvis\" knappen til å se en stilert versjon av eventyret ditt. For å se eventyret på en egen side, velg \"vis\" fra lærersiden."
 
