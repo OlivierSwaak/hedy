@@ -15,6 +15,11 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      # These tests don't need the Cypress binary or Puppeteer's Chrome, which are slow to download
+      CYPRESS_INSTALL_BINARY: 0
+      PUPPETEER_SKIP_DOWNLOAD: true
+
     steps:
     - uses: actions/checkout@v6
     - name: Set up Python 3.12
@@ -22,10 +27,10 @@ jobs:
       with:
         python-version: 3.12
         cache: 'pip'
-    - name: Set up NodeJS 16
+    - name: Set up NodeJS 22
       uses: actions/setup-node@v3
       with:
-        node-version: 16
+        node-version: 22
         cache: 'npm'
     - name: Install Python dependencies
       run: |

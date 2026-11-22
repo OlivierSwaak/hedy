@@ -1,7 +1,7 @@
 import JSZip from "jszip";
 import * as Tone from 'tone';
 import { initializeLoginLinks } from './auth';
-import { checkNow, onElementBecomesVisible } from './browser-helpers/on-element-becomes-visible';
+import { onElementBecomesVisible } from './browser-helpers/on-element-becomes-visible';
 import { ClientMessages } from './client-messages';
 import { HedyCodeMirrorEditorCreator } from './cm-editor';
 import { postJson, postNoResponse } from './comm';
@@ -39,6 +39,32 @@ let askPromptOpen = false;
  * Represents whether there's an open 'sleeping' prompt
  */
 let sleepRunning = false;
+/**
+ * The positions of the turtle after every step of the last program that ran, used to save the drawing
+ */
+let lastTurtlePath: number[][] = [];
+
+// Records the turtle path, so the drawing can be saved without running the program again.
+// It records one point more than the server accepts, so that a path that's too long gets
+// rejected instead of silently cut off. Names with __ are hidden in the variable view.
+const turtle_recording_prefix = `
+__hedy_turtle_path = []
+__hedy_turtle_forward = t.forward
+
+
+def __hedy_recording_forward(distance):
+    __hedy_turtle_forward(distance)
+    if len(__hedy_turtle_path) <= 20000:
+        __hedy_turtle_path.append([t.xcor(), t.ycor()])
+
+
+t.forward = __hedy_recording_forward
+`;
+
+function recordedTurtlePath(): number[][] {
+  const path = Sk.globals['__hedy_turtle_path'];
+  return path ? Sk.ffi.remapToJs(path) : [];
+}
 
 // Many bits of code all over this file need this information globally.
 // Not great but it'll do for now until we refactor this file some more.
@@ -46,6 +72,7 @@ let theAdventures: Record<string, Adventure> = {};
 export let theLevel: number = 0;
 export let theLanguage: string = '';
 export let theKeywordLanguage: string = 'en';
+let theVoice: string;
 let theStaticRoot: string = '';
 let currentTab: string;
 let theUserIsLoggedIn: boolean;
@@ -282,7 +309,6 @@ export function initializeCodePage(options: InitializeCodePageOptions) {
       }
     }
     reconfigurePageBasedOnTab();
-    checkNow();
     theLocalSaveWarning.switchTab();
   });
 
@@ -404,12 +430,18 @@ export function initializeHighlightedCodeBlocks(where: Element, initializeAll?: 
         .addClass('relative text-lg rounded overflow-x-hidden')
         // We set the language of the editor to the current keyword_language -> needed when copying to main editor
         .attr('data-lang', theKeywordLanguage);
-      // If the request comes from HTMX initialize all directly
-      if (initializeAll) {
+      // A page can hold a code block back altogether. The grading page has one per row and
+      // every row starts folded shut, so building them is work for nothing: an observer
+      // counts a folded row as visible and builds it anyway. Those are built on expand.
+      if (preview.classList.contains('defer-editor')) {
+        continue;
+      }
+      // If the request comes from HTMX initialize all directly, except for common mistakes:
+      // those pages hold dozens of examples, and building them all up front is SUPER SLOW.
+      if (initializeAll && !preview.classList.contains('common-mistakes')) {
         convertPreviewToEditor(preview, container, dir)
       } else {
-        // Only turn into an editor if the editor scrolls into view
-        // Otherwise, the teacher manual Frequent Mistakes page is SUPER SLOW to load.
+        // Only turn into an editor once the editor scrolls into view
         onElementBecomesVisible(preview, () => {
           convertPreviewToEditor(preview, container, dir)
         });
@@ -441,13 +473,20 @@ function convertPreviewToEditor(preview: HTMLPreElement, container: HTMLElement,
     const adventure = container.closest('[data-tabtarget]')?.getAttribute('data-tabtarget');
     const buttonContainer = $('<div>').addClass('absolute ltr:right-0 rtl:left-0 top-0 mx-1 mt-1').appendTo(preview);
 
-    $('<button>').css({ fontFamily: 'sans-serif' }).addClass('yellow-btn').attr('data-cy', `paste_example_code_${adventure}`).html('<i class="fa-solid fa-arrow-down"></i>').appendTo(buttonContainer).click(function () {
-      if (!theGlobalEditor?.isReadOnly) {
-        theGlobalEditor.contents = exampleEditor.contents + '\n';
-      }
-      update_view("main_editor_keyword_selector", <string>$(preview).attr('data-lang'));
-      stopit();
-      clearOutput();
+    $('<button>')
+      .css({ fontFamily: 'sans-serif' })
+      .addClass('yellow-btn')
+      .attr('data-cy', `paste_example_code_${adventure}`)
+      .attr('aria-label', `${ClientMessages['copy_to_editor']}`)
+      .html('<i class="fa-solid fa-arrow-down"></i>')
+      .appendTo(buttonContainer)
+      .click(function () {
+        if (!theGlobalEditor?.isReadOnly) {
+          theGlobalEditor.contents = exampleEditor.contents + '\n';
+        }
+        update_view("main_editor_keyword_selector", <string>$(preview).attr('data-lang'));
+        stopit();
+        clearOutput();
     });
   }
 
@@ -618,16 +657,25 @@ export async function runit(level: number, lang: string, raw: boolean, disabled_
 }
 
 export async function saveMachineFiles() {
-  const response = await postJson('/generate_machine_files', {
-    level: theLevel,
-    code: get_active_and_trimmed_code(),
-    lang: theLanguage,
-  });
-
-  if (response.filename) {
-    // Download the file
-    window.location.replace('/download_machine_files/' + response.filename);
+  let response;
+  try {
+    // The server responds with the zip file itself, so it can't be fetched with postJson
+    response = await fetch('/generate_machine_files', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      body: JSON.stringify({ points: lastTurtlePath }),
+    });
+  } catch {
+    return modal.notifyError(ClientMessages['Connection_error']);
   }
+
+  if (!response.ok) {
+    const body = await response.json().catch(() => ({}));
+    return modal.notifyError(body.error ?? ClientMessages['ServerError']);
+  }
+
+  download(await response.blob(), 'hedy_drawing.zip', 'application/zip');
 }
 
 function removeBulb() {
@@ -901,8 +949,9 @@ export function runPythonProgram(this: any, code: string, sourceMap: any, hasTur
     $('#turtlecanvas').empty();
   }
 
+  lastTurtlePath = [];
   if (hasTurtle) {
-    code_prefix += turtle_prefix;
+    code_prefix += turtle_prefix + turtle_recording_prefix;
     $('#turtlecanvas').show();
   }
 
@@ -1020,8 +1069,8 @@ export function runPythonProgram(this: any, code: string, sourceMap: any, hasTur
       $('#keybinding_modal').hide();
 
       if (hasTurtle) {
-        // TODO: disabled until we fix it
-        // $('#save_files_container').show();
+        lastTurtlePath = recordedTurtlePath();
+        $('#save_files_container').show();
       }
 
       // Check if the program was correct but the output window is empty: Return a warning
@@ -1102,8 +1151,8 @@ export function runPythonProgram(this: any, code: string, sourceMap: any, hasTur
         $('#keybinding_modal').hide();
 
         if (hasTurtle) {
-          // $('#save_files_container').show();
-          // TODO: disabled until we fix it
+          lastTurtlePath = recordedTurtlePath();
+          $('#save_files_container').show();
         }
 
         if (cb) cb();
@@ -1238,14 +1287,14 @@ export function runPythonProgram(this: any, code: string, sourceMap: any, hasTur
 }
 
 function speakIsMuted() {
-  return $('#speak_mute_button').attr('data-muted') === 'true';
+  return $('#speak_mute_button').attr('aria-pressed') === 'true';
 }
 
 export function toggleSpeakMute() {
   const speakMuteButton = $('#speak_mute_button');
   const speakMuteIcon = speakMuteButton.find('.fa');
 
-  const MUTED_ATTR = 'data-muted';
+  const MUTED_ATTR = 'aria-pressed';
   const MUTED_ICON = 'fa-volume-xmark';
   const UNMUTED_ICON = 'fa-volume-high';
 
@@ -1259,13 +1308,33 @@ export function toggleSpeakMute() {
   }
 }
 
+/**
+ * Ensure the state of the mute button matches the state of the dropdown. If no voice is selected, the button should be disabled and muted.
+ */
+export function updateSpeakVoice() {
+  const selectedURI = $('#speak_dropdown').val();
+  const speakMuteButton = $('#speak_mute_button');
+  if (!selectedURI) {
+    if (!speakIsMuted()) {
+      toggleSpeakMute();
+    }
+    speakMuteButton.attr('disabled', 'true');
+  } else {
+    if (speakIsMuted() && theVoice === '') {
+      // Unmute if the user selected a voice after there wasn't one selected. If the user manually muted, we don't want to unmute for them.
+      toggleSpeakMute();
+    }
+    speakMuteButton.removeAttr('disabled');
+  }
+  theVoice = selectedURI as string;
+}
+
 function speak(text: string) {
   if (speakIsMuted()) {
     return;
   }
-  var selectedURI = $('#speak_dropdown').val();
-  if (!selectedURI) { return; }
-  var voice = window.speechSynthesis.getVoices().filter(v => v.voiceURI === selectedURI)[0];
+  if (!theVoice) { return; }
+  var voice = window.speechSynthesis.getVoices().filter(v => v.voiceURI === theVoice)[0];
 
   if (voice) {
     let utterance = new SpeechSynthesisUtterance(text);
@@ -1303,6 +1372,7 @@ function initializeSpeech() {
       for (const voice of voices) {
         $('#speak_dropdown').append($('<option>').attr('value', voice.voiceURI).text('📣 ' + voice.name));
       }
+      updateSpeakVoice();
       $('#speak_container').show();
 
       clearInterval(timer);

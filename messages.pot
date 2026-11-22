@@ -89,6 +89,9 @@ msgstr ""
 msgid "Non Decimal Variable"
 msgstr ""
 
+msgid "Output"
+msgstr ""
+
 msgid "Parse"
 msgstr ""
 
@@ -302,6 +305,9 @@ msgstr ""
 msgid "back_to_class"
 msgstr ""
 
+msgid "back_to_top"
+msgstr ""
+
 msgid "background_information"
 msgstr ""
 
@@ -425,6 +431,9 @@ msgstr ""
 msgid "commands"
 msgstr ""
 
+msgid "common_mistakes"
+msgstr ""
+
 msgid "configure"
 msgstr ""
 
@@ -480,6 +489,9 @@ msgid "copy_mail_link"
 msgstr ""
 
 msgid "copy_second_teachers"
+msgstr ""
+
+msgid "copy_to_editor"
 msgstr ""
 
 msgid "country"
@@ -632,6 +644,9 @@ msgstr ""
 msgid "distinguished_user"
 msgstr ""
 
+msgid "dont_show_message_again"
+msgstr ""
+
 msgid "double quotes"
 msgstr ""
 
@@ -651,6 +666,9 @@ msgid "edit_adventure"
 msgstr ""
 
 msgid "edit_code_button"
+msgstr ""
+
+msgid "editor"
 msgstr ""
 
 msgid "email"
@@ -828,6 +846,9 @@ msgid "ill_work_some_more"
 msgstr ""
 
 msgid "image_invalid"
+msgstr ""
+
+msgid "improve_translation_on_weblate"
 msgstr ""
 
 msgid "incomplete_command_exception"
@@ -1040,6 +1061,12 @@ msgstr ""
 msgid "main_title"
 msgstr ""
 
+msgid "make_adventure_private"
+msgstr ""
+
+msgid "make_adventure_private_prompt"
+msgstr ""
+
 msgid "make_public"
 msgstr ""
 
@@ -1055,7 +1082,10 @@ msgstr ""
 msgid "manage_students_info"
 msgstr ""
 
-msgid "manual_out_of_date"
+msgid "mistake_how_to_fix"
+msgstr ""
+
+msgid "mistake_what_goes_wrong"
 msgstr ""
 
 msgid "more_adventures"
@@ -1071,6 +1101,9 @@ msgid "multiple_keywords_warning"
 msgstr ""
 
 msgid "multiple_levels_warning"
+msgstr ""
+
+msgid "mute"
 msgstr ""
 
 msgid "my_account"
@@ -1214,6 +1247,9 @@ msgstr ""
 msgid "ok"
 msgstr ""
 
+msgid "on_this_page"
+msgstr ""
+
 msgid "one_level_error"
 msgstr ""
 
@@ -1322,10 +1358,22 @@ msgstr ""
 msgid "phone_number"
 msgstr ""
 
+msgid "pick_a_level"
+msgstr ""
+
 msgid "preferred_keyword_language"
 msgstr ""
 
 msgid "preferred_language"
+msgstr ""
+
+msgid "prepare_a_level"
+msgstr ""
+
+msgid "prepare_a_level_info"
+msgstr ""
+
+msgid "prepare_level"
 msgstr ""
 
 msgid "present"
@@ -1647,6 +1695,9 @@ msgid "slides_for_level"
 msgstr ""
 
 msgid "slides_info"
+msgstr ""
+
+msgid "slides_level_info"
 msgstr ""
 
 msgid "social_media"
@@ -1979,9 +2030,6 @@ msgstr ""
 msgid "username"
 msgstr ""
 
-msgid "username_contains_invalid_symbol"
-msgstr ""
-
 msgid "username_contains_separator"
 msgstr ""
 
@@ -1991,10 +2039,13 @@ msgstr ""
 msgid "username_invalid"
 msgstr ""
 
-msgid "username_special"
+msgid "username_invalid_characters"
 msgstr ""
 
 msgid "username_three"
+msgstr ""
+
+msgid "usernames_invalid_characters"
 msgstr ""
 
 msgid "usernames_too_short"
@@ -2021,10 +2072,22 @@ msgstr ""
 msgid "walker_variable_role"
 msgstr ""
 
+msgid "weblate_modal_text"
+msgstr ""
+
 msgid "website"
 msgstr ""
 
+msgid "what_is_new_in_level"
+msgstr ""
+
 msgid "what_is_your_role"
+msgstr ""
+
+msgid "work_in_progress"
+msgstr ""
+
+msgid "workbook"
 msgstr ""
 
 msgid "workbook_circle_question_text"
@@ -2045,6 +2108,9 @@ msgstr ""
 msgid "workbook_input_question_title"
 msgstr ""
 
+msgid "workbook_level_info"
+msgstr ""
+
 msgid "workbook_multiple_choice_question_text"
 msgstr ""
 
@@ -2058,6 +2124,12 @@ msgid "workbook_output_question_text"
 msgstr ""
 
 msgid "workbook_output_question_title"
+msgstr ""
+
+msgid "workbooks"
+msgstr ""
+
+msgid "workbooks_info"
 msgstr ""
 
 msgid "written_by"

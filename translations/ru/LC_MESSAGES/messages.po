@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2000-01-01 00:00+0000\n"
-"PO-Revision-Date: 2026-02-02 20:47+0000\n"
-"Last-Translator: Annelies Vlaar <Annelies_Vlaar@hotmail.com>\n"
+"PO-Revision-Date: 2026-11-09 16:43+0000\n"
+"Last-Translator: Andrei Stepanov <adem@users.noreply.hosted.weblate.org>\n"
 "Language-Team: ru <LL@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 2026.11.2.dev0\n"
 "Generated-By: Babel 2.14.0\n"
 
 msgid "Access Before Assign"
@@ -31,48 +31,38 @@ msgstr "Мы обнаружили, что существует `{else}` испо
 msgid "Function Undefined"
 msgstr "Мы обнаружили, что функция {name} используется без определения. Можете ли вы определить функцию до ее использования?"
 
-#, fuzzy
 msgid "Has Blanks"
-msgstr "Ваша программа не готова. В ней есть пробелы, на место которых нужно вписать код."
+msgstr "Похоже, код неполный. Можете заполнить пропуски кодом?"
 
 msgid "Incomplete"
 msgstr "Мы обнаружили, что часть кода отсутствует в ` {incomplete_command} ` на линии {line_number} . Можете ли вы попробовать добавить то, чего не хватает?"
 
-#, fuzzy
 msgid "Incomplete Repeat"
-msgstr "Похоже вы забыли использовать какую-нибудь ещё команду вместе с командой `{repeat}` на строке {line_number}."
+msgstr "Похоже, в команде `{repeat}` на строке {line_number} не хватает команды `{command}`. Попробуйте добавить её."
 
-#, fuzzy
 msgid "Invalid"
-msgstr "`{invalid_command}` - это не команда Хеди с уровня {level}. Может вы имели ввиду `{guessed_command}`?"
+msgstr "`{invalid_command}` — это не команда Hedy уровня {level}. Может, вы имели в виду `{guessed_command}`?"
 
-#, fuzzy
 msgid "Invalid Argument"
-msgstr "Вы не можете использовать команду `{command}` с `{invalid_argument}` . Попробуйте заменить `{invalid_argument}` на {allowed_types}."
+msgstr "Команду `{command}` нельзя использовать с `{invalid_argument}`. Попробуйте заменить `{invalid_argument}` на {allowed_types}."
 
-#, fuzzy
 msgid "Invalid Argument Type"
-msgstr "Вы не можете использовать команду `{command}` с `{invalid_argument}` потому что это {invalid_type}. Замените `{invalid_argument}` на {allowed_types}."
+msgstr "Команда `{command}` не работает с `{invalid_argument}`, потому что это {invalid_type}. Попробуйте заменить `{invalid_argument}` на {allowed_types}."
 
-#, fuzzy
 msgid "Invalid At Command"
-msgstr "Команду `{command}` нельзя использовать начиная с уровня 16. Используйте квадратные скобки для того чтобы обратиться к элементу списка, например `друзья[i]`, `счастливые_числа[{random}]`."
+msgstr "Команду `{command}` нельзя использовать начиная с уровня 16. Попробуйте использовать квадратные скобки `[]` для списков."
 
-#, fuzzy
 msgid "Invalid Space"
-msgstr "Ой-ой! Вы начали код с пробела на строке {line_number}. Этот пробел может запутать компьютер, можете удалить его?"
+msgstr "Похоже, строка {line_number} начинается с пробела. Попробуйте удалить этот пробел."
 
-#, fuzzy
 msgid "Invalid Type Combination"
-msgstr "Вы не можете использовать `{invalid_argument}` и `{invalid_argument_2}` с командой `{command}` потому что первый - {invalid_type} и второй - {invalid_type_2}. Замените `{invalid_argument}` на {invalid_type_2} или `{invalid_argument_2}` на {invalid_type}."
+msgstr "`{invalid_argument}` и `{invalid_argument_2}` нельзя использовать с командой `{command}`, потому что первое — {invalid_type}, а второе — {invalid_type_2}. Попробуйте заменить `{invalid_argument}` на {invalid_type_2} или `{invalid_argument_2}` на {invalid_type}."
 
-#, fuzzy
 msgid "Lonely Echo"
-msgstr "Вы использовали команду `{echo}` до команды `{ask}` или `{echo}` без `{ask}`. Вставьте `{ask}` до команды `{echo}`."
+msgstr "Команда `{echo}` используется до команды `{ask}` или без неё. Попробуйте написать `{ask}` перед `{echo}`."
 
-#, fuzzy
 msgid "Lonely Text"
-msgstr "Кажется, вы забыли использовать команду вместе с текстом, написанным на строке {line_number}"
+msgstr "Похоже, в коде не хватает команды с текстом, использованным в строке {line_number}. Попробуйте написать нужную команду вместе с текстом."
 
 msgid "Missing Additional Command"
 msgstr "Мы обнаружили, что команда ` {command} ` на линии {line_number} чего-то не хватает. Можете ли вы попробовать использовать ` {missing_command} ` в вашем коде?"
@@ -80,13 +70,11 @@ msgstr "Мы обнаружили, что команда ` {command} ` на ли
 msgid "Missing Colon Error"
 msgstr "Мы обнаружили, что `{command}`нужен `:` в конце строки {line_number} . Начиная с уровень 17, можете ли вы начать добавлять `:` в конце строки с командами?"
 
-#, fuzzy
 msgid "Missing Command"
-msgstr "Кажется, вы забыли использовать команду на строке {line_number}."
+msgstr "Похоже, в строке {line_number} не хватает команды. Посмотрите раздел с упражнением, чтобы узнать, какую команду использовать."
 
-#, fuzzy
 msgid "Missing Inner Command"
-msgstr "Кажется, вы забыли использовать команду с выражением `{command}` на строке {line_number}."
+msgstr "Похоже, для выражения `{command}` в строке {line_number} не хватает команды. Посмотрите раздел с упражнением, чтобы узнать, какую команду использовать."
 
 msgid "Missing Square Brackets"
 msgstr "Мы обнаружили, что список, созданный вами онлайн, {line_number} отсутствуют квадратные скобки `[]`. Можете ли вы попробовать добавить квадратные скобки вокруг списка `[]`?"
@@ -95,112 +83,103 @@ msgid "Missing Variable"
 msgstr "Мы обнаружили, что `{command}` отсутствует переменная в начале строки. Можете ли вы попробовать записать переменную перед `{command}?`"
 
 msgid "Misspelled At Command"
-msgstr ""
+msgstr "Похоже, в `{invalid_argument}` на строке {line_number} опечатка. Попробуйте написать `{command}` вместо него."
 
-#, fuzzy
 msgid "No Indentation"
-msgstr "Вы поставили недостаточно пробелов на строке {line_number}. Вы поставили {leading_spaces} пробелов, но этого мало. В каждом новом блоке кода ставьте на {indent_size} пробелов больше, чем было на предыдущей строке."
+msgstr "Похоже, в строке {line_number} использовано слишком мало пробелов ({leading_spaces}). Попробуйте увеличивать отступ на {indent_size} для каждого нового блока."
 
 msgid "Non Decimal Variable"
-msgstr ""
+msgstr "Похоже, в строке {line_number} вы использовали число, которое Hedy не поддерживает! Попробуйте десятичное число, например 2?"
 
-#, fuzzy
+msgid "Output"
+msgstr "Вывод"
+
 msgid "Parse"
-msgstr "Введенный вами код не является действительным кодом Hedy. В строке {location[0]}, в позиции {location[1]}, допущена ошибка. Вы ввели `{character_found}`, но это недопустимо."
+msgstr "В строке {location[0]} используется `{character_found}`, что недопустимо. Поищите в коде пропущенный или лишний символ."
 
 msgid "Pressit Missing Else"
-msgstr ""
+msgstr "Похоже, в коде не хватает `{else}` для обработки других нажатий клавиш. Попробуйте добавить `{else}` в код."
 
-#, fuzzy
 msgid "Runtime Index Error"
-msgstr "Вы пытались получить доступ к списку {name}, но он либо пуст, либо в нем отсутствует индекс."
+msgstr "Похоже, список {name} пуст или в нём отсутствует индекс. Убедитесь, что список не пуст, или попробуйте вписать число в `[]` вместо пропущенного индекса."
 
 msgid "Runtime Value Error"
-msgstr ""
+msgstr "Похоже, `{command}` получила недопустимое значение `{value}`. {tip}."
 
 msgid "Runtime Values Error"
-msgstr ""
+msgstr "Похоже, `{command}` получила недопустимые значения `{value}` и `{value}`. {tip}."
 
 msgid "Save Microbit code "
-msgstr ""
+msgstr "Сохранить код Microbit"
 
-#, fuzzy
 msgid "Too Big"
-msgstr "Вот это да! Ваша программа содержит впечатляющие {lines_of_code} строк кода! Но на этом уровне мы можем обработать только {max_lines} строк. Сделайте вашу программу меньше и попробуйте снова."
+msgstr "В программе {lines_of_code} строк, но мы можем обработать только {max_lines} строк. Попробуйте сократить программу."
 
 msgid "Too Few Indents"
-msgstr ""
+msgstr "Похоже, в строке {line_number} слишком мало пробелов ({leading_spaces}). Попробуйте добавить ещё один пробел."
 
 msgid "Too Many Indents"
-msgstr ""
+msgstr "Похоже, в строке {line_number} слишком много пробелов ({leading_spaces}). Попробуйте убрать лишний пробел."
 
-#, fuzzy
 msgid "Unexpected Indentation"
-msgstr "Вы использовали слишком много пробелов в строке {line_number}. Вы использовали {leading_spaces} пробелов, что слишком много. Начинайте каждый новый блок с {indent_size} пробелов больше, чем в предыдущей строке."
+msgstr "В строке {line_number} слишком много пробелов ({leading_spaces}). Попробуйте добавлять по {indent_size} пробелов для каждого нового блока."
 
-#, fuzzy
 msgid "Unquoted Assignment"
-msgstr "Начиная с этого уровня, вам нужно помещать тексты справа от `{is}` между кавычками. Вы забыли это для текста {text}."
+msgstr "Текст справа от `{is}` не заключён в кавычки. На этом уровне текст нужно писать в кавычках. Попробуйте сделать это для текста {text}"
 
-#, fuzzy
 msgid "Unquoted Equality Check"
-msgstr "Если вы хотите проверить, равна ли переменная нескольким словам, слова должны быть окружены кавычками!"
+msgstr "Код пытается проверить, равна ли переменная нескольким словам. Попробуйте заключить слова, которые хотите проверить, в кавычки."
 
-#, fuzzy
 msgid "Unquoted Text"
-msgstr "Будьте внимательны. Если вы `{ask}` или `{print}` что-то, текст должен начинаться и заканчиваться кавычками. Вы забыли это для текста {unquotedtext}."
+msgstr "Похоже, текст для `{ask}` или `{print}` не заключён в кавычки. Попробуйте добавить кавычки для {unquotedtext}."
 
-#, fuzzy
 msgid "Unsupported Float"
-msgstr "Нецелые числа пока не поддерживаются, но будут поддерживаться через несколько уровней. Пока измените `{value}` на целое число."
+msgstr "Код использует нецелые числа, которые пока не поддерживаются. Попробуйте заменить `{value}` на целое число."
 
-#, fuzzy
 msgid "Unsupported String Value"
-msgstr "Текстовые значения не могут содержать `{invalid_value}`."
+msgstr "Текст содержит значение `{invalid_value}`, которое в нём недопустимо. Попробуйте убрать это значение или изменить его тип."
 
 msgid "Unused Variable"
-msgstr ""
+msgstr "Переменная {variable_name} определена в строке {line_number}, но не используется. Попробуйте использовать её или удалить."
 
-#, fuzzy
 msgid "Var Undefined"
-msgstr "Вы пытались использовать переменную `{name}`, но не задали ее. Также возможно, что вы пытались использовать слово `{name}`, но забыли кавычки."
+msgstr "Переменная `{name}` используется до того, как ей присвоено значение. Присвойте значение переменной до её использования или заключите `{name}` в кавычки."
 
-#, fuzzy
 msgid "Wrong Level"
-msgstr "Это был правильный код Hedy, но не на том уровне. Вы написали `{offending_keyword}` для уровня {working_level}. Подсказка: {tip}"
+msgstr "Написанный код — правильный код Hedy, но `{offending_keyword}` используется на уровне {working_level}. {tip}"
 
 msgid "Wrong Number of Arguments"
-msgstr ""
+msgstr "Функция {name} получила неверное число аргументов: {used_number}. Попробуйте указать {defined_number}."
 
 msgid "about_this_adventure"
-msgstr ""
+msgstr "Об этом приключении"
 
 msgid "accept_program"
-msgstr ""
+msgstr "Принять программу"
 
 msgid "account_overview"
 msgstr "Обзор учетной записи"
 
 msgid "actions"
-msgstr ""
+msgstr "Действия"
 
 msgid "active_classes"
-msgstr ""
+msgstr "Активные классы"
 
 msgid "add"
-msgstr ""
+msgstr "Добавить"
 
 msgid "add_adventures"
-msgstr ""
+msgstr "Добавить приключения"
 
 msgid "add_students"
 msgstr "Добавить студентов"
 
 msgid "add_your_language"
-msgstr ""
+msgstr "Добавьте свой язык!"
 
 msgid "additional_teachers"
-msgstr ""
+msgstr "Дополнительные учителя"
 
 msgid "admin"
 msgstr "Администратор"
@@ -209,13 +188,13 @@ msgid "adventure"
 msgstr "Приключения"
 
 msgid "adventure_cloned"
-msgstr ""
+msgstr "Приключение склонировано"
 
 msgid "adventure_code_button"
-msgstr ""
+msgstr "Показывает команду внутри предложения, например <code>print</code>. Ученики не могут её запустить. Для кода, который ученики должны запустить, используйте кнопку ниже."
 
 msgid "adventure_codeblock_button"
-msgstr ""
+msgstr "Добавляет блок примера кода, который ученики могут отправить в свой редактор и запустить. <b>Чтобы выйти из блока:</b> поставьте курсор в конец последней строки и нажмите стрелку вниз."
 
 msgid "adventure_duplicate"
 msgstr "У вас уже есть приключение с этим названием."
@@ -224,10 +203,10 @@ msgid "adventure_empty"
 msgstr "Вы не ввели название приключения!"
 
 msgid "adventure_exp_classes"
-msgstr ""
+msgstr "Ваше приключение используется в следующих классах"
 
 msgid "adventure_flagged"
-msgstr ""
+msgstr "Приключение успешно отмечено."
 
 msgid "adventure_id_invalid"
 msgstr "Неверный идентификатор приключения."
@@ -245,25 +224,25 @@ msgid "adventure_updated"
 msgstr "Приключение было обновлено!"
 
 msgid "adventures"
-msgstr ""
+msgstr "Приключения"
 
 msgid "adventures_at_level"
-msgstr ""
+msgstr "Приключения на уровне"
 
 msgid "adventures_completed"
-msgstr ""
+msgstr "Пройдено приключений: {number_of_adventures}"
 
 msgid "adventures_info"
-msgstr ""
+msgstr "На каждом уровне Hedy есть встроенные упражнения для учеников, которые мы называем приключениями. Вы можете создавать свои приключения и добавлять их в свои классы. Со своими приключениями вы можете создавать задания, актуальные и интересные для ваших учеников. Подробнее о создании собственных приключений можно узнать <a href=\"/for-teachers/manual\">здесь</a>."
 
 msgid "adventures_restored"
-msgstr ""
+msgstr "Стандартные приключения восстановлены."
 
 msgid "adventures_ticked"
-msgstr ""
+msgstr "Приключения отмечены"
 
 msgid "adventures_tried"
-msgstr ""
+msgstr "Приключения пройдены"
 
 msgid "ago"
 msgstr "{timestamp} назад"
@@ -281,10 +260,10 @@ msgid "all"
 msgstr "Все"
 
 msgid "all_rows_missing_separator"
-msgstr ""
+msgstr "Ни в одной строке нет точки с запятой. Возможно, вы хотите, чтобы мы автоматически сгенерировали пароли? Тогда переключите переключатель паролей и создайте учётные записи заново. Если нет, разделите имена пользователей и пароли точкой с запятой в следующих строках: {rows}"
 
 msgid "allow_resubmit"
-msgstr ""
+msgstr "Разрешить повторную отправку"
 
 msgid "already_account"
 msgstr "У вас уже есть учётная запись?"
@@ -293,46 +272,49 @@ msgid "already_program_running"
 msgstr "Какая-то программа уже исполняется, подождите когда она закончит выполнение."
 
 msgid "archive"
-msgstr ""
+msgstr "Архивировать"
 
 msgid "archive_class"
-msgstr ""
+msgstr "Архивировать класс"
 
 msgid "archived"
-msgstr ""
+msgstr "Архивировано"
 
 msgid "archived_classes"
-msgstr ""
+msgstr "Архивированные классы"
 
 msgid "are_you_sure"
 msgstr "Вы уверены? Это действие невозможно будет отменить или откатить."
 
 msgid "are_you_sure_soft"
-msgstr ""
+msgstr "Вы уверены?"
 
 msgid "ask_needs_var"
 msgstr "Начиная со второго уровня, `{ask}` нужно использовать с переменной. Пример: имя `{is}` `{ask}` Как тебя зовут?"
 
 msgid "available"
-msgstr ""
+msgstr "Доступно"
 
 msgid "available_for_students"
-msgstr ""
+msgstr "Доступно для учеников"
 
 msgid "available_in"
-msgstr ""
+msgstr "Доступно в:"
 
 msgid "available_levels"
-msgstr ""
+msgstr "Доступные уровни"
 
 msgid "back_to_class"
 msgstr "Вернуться в класс"
 
+msgid "back_to_top"
+msgstr "Наверх"
+
 msgid "background_information"
-msgstr ""
+msgstr "Справочная информация"
 
 msgid "background_information_info"
-msgstr ""
+msgstr "Всё, что нужно знать перед началом преподавания с Hedy: дидактические идеи, лежащие в основе языка, советы по уровням, типичные ошибки учеников и способы их устранения."
 
 msgid "become_a_sponsor"
 msgstr "Станьте спонсором"
@@ -341,10 +323,10 @@ msgid "birth_year"
 msgstr "Год рождения"
 
 msgid "built_in"
-msgstr ""
+msgstr "Встроенное"
 
 msgid "built_in_adventures"
-msgstr ""
+msgstr "Встроенные приключения"
 
 msgid "by"
 msgstr "от"
@@ -353,7 +335,7 @@ msgid "cancel"
 msgstr "Отменить"
 
 msgid "cant_parse_exception"
-msgstr ""
+msgstr "Не удалось разобрать программу"
 
 msgid "certified_teacher"
 msgstr "Сертифицированный преподаватель"
@@ -365,7 +347,7 @@ msgid "cheatsheet_title"
 msgstr "Шпаргалка"
 
 msgid "choose_a_voice"
-msgstr ""
+msgstr "Выбрать голос"
 
 msgid "class"
 msgstr "Класс"
@@ -377,13 +359,13 @@ msgid "class_customize_success"
 msgstr "Класс успешно настроен."
 
 msgid "class_graph_explanation"
-msgstr ""
+msgstr "На этом графике отображено количество приключений, которые ваши ученики попробовали (то есть проделали содержательную работу в этом приключении), по отношению к количеству ошибок и успешных запусков."
 
 msgid "class_logs"
 msgstr "Журналы"
 
 msgid "class_name"
-msgstr ""
+msgstr "Название класса"
 
 msgid "class_name_duplicate"
 msgstr "У вас уже есть класс с таким именем."
@@ -398,43 +380,43 @@ msgid "class_name_prompt"
 msgstr "Пожалуйста, введите название нового класса"
 
 msgid "class_survey_description"
-msgstr ""
+msgstr "Мы хотели бы лучше понимать наших пользователей Hedy. Ответив на эти вопросы, вы поможете улучшить Hedy. Спасибо!"
 
 msgid "class_survey_later"
-msgstr ""
+msgstr "Напомнить завтра"
 
 msgid "class_survey_question1"
-msgstr ""
+msgstr "Какой возрастной диапазон в вашем классе?"
 
 msgid "class_survey_question2"
-msgstr ""
+msgstr "На каком языке говорят в вашем классе?"
 
 msgid "class_survey_question3"
-msgstr ""
+msgstr "Каково гендерное соотношение в вашем классе?"
 
 msgid "class_survey_question4"
-msgstr ""
+msgstr "Чем ваши ученики отличаются от других?"
 
 msgid "class_updated_successfully"
-msgstr ""
+msgstr "Класс успешно обновлён."
 
 msgid "class_without_adventures"
-msgstr ""
+msgstr "Класс без приключений"
 
 msgid "class_without_adventures_explanation"
-msgstr ""
+msgstr "Создать класс без включённых приключений."
 
 msgid "classes"
-msgstr ""
+msgstr "Классы"
 
 msgid "classes_info"
-msgstr ""
+msgstr "Создайте класс, чтобы следить за прогрессом каждого ученика на панели управления, настраивать приключения, которые видят ученики, и даже добавлять свои! Вы можете создавать сколько угодно классов, и в каждом классе может быть несколько учителей с разными ролями. Вы также можете добавить сколько угодно учеников, но учтите, что каждый ученик может быть только в одном классе одновременно. Подробнее о классах можно узнать в <a href=\"/for-teachers/manual\">руководстве для учителя</a>."
 
 msgid "clone"
-msgstr ""
+msgstr "Клонировать"
 
 msgid "cloned_times"
-msgstr ""
+msgstr "Клоны"
 
 msgid "close"
 msgstr "Закрыть"
@@ -443,61 +425,64 @@ msgid "comma"
 msgstr "запятая"
 
 msgid "command_not_available_yet_exception"
-msgstr ""
+msgstr "Команда пока недоступна"
 
 msgid "command_unavailable_exception"
-msgstr ""
+msgstr "Команда больше не верна"
 
 msgid "commands"
 msgstr "Команды"
 
+msgid "common_mistakes"
+msgstr "Типичные ошибки"
+
 msgid "configure"
-msgstr ""
+msgstr "Настроить"
 
 msgid "configure_class"
-msgstr ""
+msgstr "Настроить класс"
 
 msgid "configure_class_info"
-msgstr ""
+msgstr "Здесь вы можете настроить некоторые параметры своего класса. Вы можете добавлять, удалять или менять порядок приключений, а также открывать некоторые уровни после определённой даты."
 
 msgid "confirm"
-msgstr ""
+msgstr "Подтвердить"
 
 msgid "connect_guest_teacher"
-msgstr ""
+msgstr "Я хотел(а) бы связаться с приглашённым учителем, который может провести несколько уроков"
 
 msgid "constant_variable_role"
-msgstr ""
+msgstr "константа"
 
 msgid "containing"
-msgstr ""
+msgstr "Содержащий"
 
 msgid "content"
-msgstr ""
+msgstr "Содержимое"
 
 msgid "content_invalid"
 msgstr "Это приключение недействительно."
 
 msgid "continue"
-msgstr ""
+msgstr "Продолжить"
 
 msgid "contributor"
 msgstr "Вкладчик"
 
 msgid "copy_accounts_to_clipboard"
-msgstr ""
+msgstr "Копировать в буфер обмена"
 
 msgid "copy_class"
-msgstr ""
+msgstr "Скопировать существующий класс"
 
 msgid "copy_class_explanation"
-msgstr ""
+msgstr "Создать новый класс, включая настройки и приключения из существующего класса. Ученики при этом не переносятся."
 
 msgid "copy_clipboard"
 msgstr "Успешно скопировано в буфер обмена"
 
 msgid "copy_code"
-msgstr ""
+msgstr "Копировать код"
 
 msgid "copy_link_to_share"
 msgstr "Скопируйте ссылку, чтобы поделиться"
@@ -506,7 +491,10 @@ msgid "copy_mail_link"
 msgstr "Пожалуйста, скопируйте и вставьте эту ссылку в новую вкладку:"
 
 msgid "copy_second_teachers"
-msgstr ""
+msgstr "Пригласить вторых учителей из другого класса в этот?"
+
+msgid "copy_to_editor"
+msgstr "Копировать код в редактор"
 
 msgid "country"
 msgstr "Страна"
@@ -521,10 +509,10 @@ msgid "create_accounts"
 msgstr "Создание аккаунтов"
 
 msgid "create_accounts_placeholder"
-msgstr ""
+msgstr "Введите учётные записи или вставьте их из электронной таблицы"
 
 msgid "create_accounts_prompt"
-msgstr ""
+msgstr "Будет создано учётных записей учеников: {number_of_accounts}. Вы уверены?"
 
 msgid "create_adventure"
 msgstr "Создать приключение"
@@ -539,7 +527,7 @@ msgid "create_student_account_explanation"
 msgstr "Вы можете сохранять собственные программы, имея учетную запись."
 
 msgid "create_student_accounts"
-msgstr ""
+msgstr "Создать учётные записи учеников для"
 
 msgid "create_teacher_account"
 msgstr "Создайте учетную запись учителя"
@@ -548,19 +536,19 @@ msgid "create_teacher_account_explanation"
 msgstr "Имея учетную запись учителя, вы можете сохранять свои программы и видеть результаты своих учеников."
 
 msgid "create_usernames_and_passwords_desc"
-msgstr ""
+msgstr "Введите по одному имени пользователя и паролю в строке, разделяя их точкой с запятой. Или, если данные есть в электронной таблице из двух столбцов, скопируйте содержимое файла и вставьте здесь."
 
 msgid "create_usernames_and_passwords_title"
-msgstr ""
+msgstr "Имена пользователей и пароли"
 
 msgid "create_usernames_desc"
-msgstr ""
+msgstr "Введите по одному имени пользователя в строке или вставьте их из электронной таблицы."
 
 msgid "create_usernames_title"
-msgstr ""
+msgstr "Имена пользователей"
 
 msgid "created"
-msgstr ""
+msgstr "Создано"
 
 msgid "creator"
 msgstr "Создатель"
@@ -569,13 +557,13 @@ msgid "current_password"
 msgstr "Текущий пароль"
 
 msgid "custom_adventures"
-msgstr ""
+msgstr "Свои приключения"
 
 msgid "customization_deleted"
 msgstr "Настройки успешно удалены."
 
 msgid "customize"
-msgstr ""
+msgstr "Настроить"
 
 msgid "customize_adventure"
 msgstr "Настроить приключение"
@@ -584,29 +572,28 @@ msgid "customize_class"
 msgstr "Настроить класс"
 
 msgid "customize_levels"
-msgstr ""
+msgstr "Настроить уровни"
 
 msgid "danger_zone"
-msgstr ""
+msgstr "Опасная зона"
 
 msgid "dash"
 msgstr "тире"
 
 msgid "debug"
-msgstr ""
+msgstr "Отладка"
 
 msgid "default_401"
 msgstr "Похоже, вы не авторизованы..."
 
 msgid "default_403"
-msgstr ""
+msgstr "Похоже, это действие запрещено..."
 
 msgid "default_404"
 msgstr "Мы не смогли найти эту страницу..."
 
-#, fuzzy
 msgid "default_500"
-msgstr "Что-то пошло не так..."
+msgstr "Что-то пошло не так. Пожалуйста, сообщите нам об этом по адресу hello@hedy.org."
 
 msgid "delete"
 msgstr "Удалить"
@@ -615,7 +602,7 @@ msgid "delete_adventure_prompt"
 msgstr "Вы уверены, что хотите удалить это приключение?"
 
 msgid "delete_class"
-msgstr ""
+msgstr "Удалить класс"
 
 msgid "delete_class_prompt"
 msgstr "Вы уверены, что хотите удалить класс?"
@@ -636,28 +623,31 @@ msgid "delete_success"
 msgstr "Программа успешно удалена."
 
 msgid "delete_tag_prompt"
-msgstr ""
+msgstr "Вы уверены, что хотите удалить этот тег?"
 
 msgid "destroy_account"
 msgstr "Удалить профиль"
 
 msgid "destroy_account_message"
-msgstr ""
+msgstr "Удаление учётной записи нельзя отменить. Это удалит вашу учётную запись и все связанные данные, такие как публичный профиль, программы, приключения и классы. Убедитесь, что хотите продолжить, так как это действие необратимо."
 
 msgid "directly_available"
 msgstr "Прямое открытие"
 
 msgid "disable"
-msgstr ""
+msgstr "Отключить"
 
 msgid "disabled"
-msgstr ""
+msgstr "Отключено"
 
 msgid "discord_server"
 msgstr "Сервер Discord"
 
 msgid "distinguished_user"
 msgstr "Выдающийся пользователь"
+
+msgid "dont_show_message_again"
+msgstr "Больше не показывать это сообщение"
 
 msgid "double quotes"
 msgstr "двойные кавычки"
@@ -669,17 +659,19 @@ msgid "duplicate"
 msgstr "Дубликат"
 
 msgid "echo_and_ask_mismatch_exception"
-msgstr ""
+msgstr "Несоответствие echo и ask"
 
-#, fuzzy
 msgid "echo_out"
-msgstr "Начиная со второго уровня `{echo}` больше не нужен. Теперь вы можете повторить ответ с помощью `{ask}` и `{print}`. Пример: имя `{ask}` Как тебя зовут? `{print}` привет имя"
+msgstr "Начиная с уровня 2 `{echo}` больше не нужен. Теперь вы можете повторить ответ с помощью `{ask}` и `{print}`. Пример: `name {is} {ask} What are you called? {print} hello name`"
 
 msgid "edit_adventure"
-msgstr ""
+msgstr "Редактировать приключение"
 
 msgid "edit_code_button"
 msgstr "Изменить код"
+
+msgid "editor"
+msgstr "Редактор кода"
 
 msgid "email"
 msgstr "Электронная почта"
@@ -703,7 +695,7 @@ msgid "error_logo_alt"
 msgstr "Логотип ошибки"
 
 msgid "errors"
-msgstr ""
+msgstr "Ошибки"
 
 msgid "exclamation mark"
 msgstr "восклицательный знак"
@@ -715,10 +707,10 @@ msgid "exists_username"
 msgstr "Это имя пользователя уже используется."
 
 msgid "exit_preview_mode"
-msgstr ""
+msgstr "Выйти из режима предпросмотра"
 
 msgid "expand_output"
-msgstr ""
+msgstr "Развернуть вывод"
 
 msgid "experience_invalid"
 msgstr "Пожалуйста, выберите действующий опыт, выберите (Да, Нет)."
@@ -727,7 +719,7 @@ msgid "expiration_date"
 msgstr "Срок действия"
 
 msgid "favorite_program"
-msgstr ""
+msgstr "Избранная программа"
 
 msgid "favourite_confirm"
 msgstr "Вы уверены, что хотите установить эту программу в качестве любимой?"
@@ -742,16 +734,16 @@ msgid "favourite_success"
 msgstr "Ваша программа установлена как избранная."
 
 msgid "feedback_message_error"
-msgstr ""
+msgstr "Что-то пошло не так, попробуйте позже."
 
 msgid "female"
 msgstr "Женский"
 
 msgid "filter"
-msgstr ""
+msgstr "Фильтр"
 
 msgid "flag_adventure_prompt"
-msgstr ""
+msgstr "Хотите отметить это приключение, чтобы мы проверили его уместность?"
 
 msgid "float"
 msgstr "число"
@@ -784,28 +776,28 @@ msgid "give_link_to_teacher"
 msgstr "Дайте следующую ссылку своему учителю:"
 
 msgid "go_back"
-msgstr ""
+msgstr "Назад"
 
 msgid "go_back_to_main"
 msgstr "Вернуться на главную страницу"
 
 msgid "go_to_your_clone"
-msgstr ""
+msgstr "Перейти к своей копии"
 
 msgid "goto_profile"
 msgstr "Перейти в мой профиль"
 
 msgid "grading"
-msgstr ""
+msgstr "Оценивание"
 
 msgid "grading_class_info"
-msgstr ""
+msgstr "Здесь вы можете увидеть отправленные программы ваших учеников."
 
 msgid "grading_table_explanation"
-msgstr ""
+msgstr "В таблице показаны программы, отправленные вашими учениками. Фильтры позволяют отобрать программы по уровню, ученику и/или приключению; фильтр применяется после нажатия кнопки «Фильтр». Нажимая на кнопки рядом с заголовками таблицы, можно также сортировать таблицу."
 
 msgid "graph_title"
-msgstr ""
+msgstr "Ошибки на каждое пройденное приключение на уровне {level}"
 
 msgid "hand_in"
 msgstr "Вручить"
@@ -820,7 +812,7 @@ msgid "heard_about_invalid"
 msgstr "Пожалуйста, выберите правильный способ, которым вы узнали о нас."
 
 msgid "hedy_introduction_slides"
-msgstr ""
+msgstr "Вводные слайды Hedy"
 
 msgid "hedy_logo_alt"
 msgstr "Логотип Хеди"
@@ -829,25 +821,25 @@ msgid "hedy_on_github"
 msgstr "Hedy на Github"
 
 msgid "hedy_teacher_update_content"
-msgstr ""
+msgstr "Мы внесли большие изменения в содержимое, чтобы сделать Hedy ещё лучше! Это означает, что приключения и уровни могли быть перемещены или удалены, что может вызвать проблемы с текущими настройками вашего класса.<br /><br />Чтобы избежать проблем и получить самую актуальную версию содержимого, нажмите кнопку «Обновить» в таблице классов. Эта кнопка: удалит устаревшие приключения из вашего класса и добавит новые, улучшенные.<br /><br />Подробнее об изменениях можно прочитать в этом <a href='https://mailchi.mp/8fd6211e776a/8w1lcvtsd8-16537057'>фрагменте нашей рассылки</a>."
 
 msgid "hedy_teacher_update_title"
-msgstr ""
+msgstr "Важные изменения в Hedy"
 
 msgid "hello_logo"
 msgstr "Привет!"
 
 msgid "hide_adventures"
-msgstr ""
+msgstr "Скрыть приключения"
 
 msgid "hide_classes"
-msgstr ""
+msgstr "Скрыть классы"
 
 msgid "hide_keyword_switcher"
 msgstr "Скрыть переключатель ключевых слов"
 
 msgid "hide_slides"
-msgstr ""
+msgstr "Скрыть слайды"
 
 msgid "highest_level_reached"
 msgstr "Достигнут высочайший уровень"
@@ -855,30 +847,32 @@ msgstr "Достигнут высочайший уровень"
 msgid "ill_work_some_more"
 msgstr "Я еще немного поработаю над этим"
 
-#, fuzzy
 msgid "image_invalid"
-msgstr "Картинка, которую вы выбрали, не подходит."
+msgstr "Выбранное изображение недопустимо."
+
+msgid "improve_translation_on_weblate"
+msgstr "Улучшить этот перевод на Weblate"
 
 msgid "incomplete_command_exception"
-msgstr ""
+msgstr "Неполная команда"
 
 msgid "incorrect_handling_of_quotes_exception"
-msgstr ""
+msgstr "Неверная обработка кавычек"
 
 msgid "incorrect_use_of_types_exception"
-msgstr ""
+msgstr "Неверное использование типов"
 
 msgid "incorrect_use_of_variable_exception"
-msgstr ""
+msgstr "Неверное использование переменной"
 
 msgid "indentation_exception"
-msgstr ""
+msgstr "Неверные отступы"
 
 msgid "input"
 msgstr "ввод от `{ask}`"
 
 msgid "input_variable_role"
-msgstr ""
+msgstr "ввод"
 
 msgid "integer"
 msgstr "число"
@@ -887,19 +881,19 @@ msgid "invalid_class_link"
 msgstr "Недействительная ссылка для присоединения к классу."
 
 msgid "invalid_command_exception"
-msgstr ""
+msgstr "Недопустимая команда"
 
 msgid "invalid_keyword_language_comment"
-msgstr ""
+msgstr "# Указанный язык ключевых слов недопустим, язык ключевых слов установлен на английский"
 
 msgid "invalid_language_comment"
-msgstr ""
+msgstr "# Указанный язык недопустим, язык установлен на английский"
 
 msgid "invalid_level_comment"
-msgstr ""
+msgstr "# Указанный уровень недопустим, установлен уровень 1"
 
 msgid "invalid_program_comment"
-msgstr ""
+msgstr "# Указанная программа недопустима, попробуйте ещё раз"
 
 msgid "invalid_teacher_invitation_code"
 msgstr "Код приглашения учителя недействителен. Чтобы стать учителем, обратитесь по адресу hello@hedy.org."
@@ -908,10 +902,10 @@ msgid "invalid_username_password"
 msgstr "Неверное имя пользователя/пароль."
 
 msgid "invitations_sent"
-msgstr ""
+msgstr "Все приглашения успешно отправлены!"
 
 msgid "invite"
-msgstr ""
+msgstr "Пригласить"
 
 msgid "invite_by_username"
 msgstr "Пригласить по имени пользователя"
@@ -926,10 +920,10 @@ msgid "invite_prompt"
 msgstr "Введите имя пользователя"
 
 msgid "invite_teacher"
-msgstr ""
+msgstr "Пригласить учителя"
 
 msgid "invited_on"
-msgstr ""
+msgstr "Приглашён"
 
 msgid "join_class"
 msgstr "Присоединиться к классу"
@@ -937,18 +931,17 @@ msgstr "Присоединиться к классу"
 msgid "join_prompt"
 msgstr "Чтобы присоединиться к занятиям, необходимо иметь учетную запись. Хотите войти в систему сейчас?"
 
-#, fuzzy
 msgid "keybinding_waiting_for_keypress"
-msgstr "Жду нажатия кнопки..."
+msgstr "Ожидание нажатия клавиши..."
 
 msgid "keyword_language_invalid"
 msgstr "Пожалуйста, выберите правильный язык ключевого слова (выберите английский или свой собственный язык)."
 
 msgid "landcode_phone_number"
-msgstr ""
+msgstr "Пожалуйста, также укажите код страны"
 
 msgid "language"
-msgstr ""
+msgstr "Язык"
 
 msgid "language_invalid"
 msgstr "Пожалуйста, выберите правильный язык."
@@ -957,7 +950,7 @@ msgid "languages"
 msgstr "Какие из этих языков программирования вы использовали раньше?"
 
 msgid "last_changed"
-msgstr ""
+msgstr "Последнее изменение"
 
 msgid "last_edited"
 msgstr "Последнее редактирование"
@@ -975,17 +968,16 @@ msgid "level"
 msgstr "Уровень"
 
 msgid "level_accessible"
-msgstr ""
+msgstr "Уровень открыт для учеников"
 
 msgid "level_disabled"
 msgstr "Уровень отключен"
 
 msgid "level_future"
-msgstr ""
+msgstr "Этот уровень автоматически откроется "
 
-#, fuzzy
 msgid "level_invalid"
-msgstr "Этот уровень Hedy недействителен."
+msgstr "Этот уровень Hedy недопустим."
 
 msgid "level_not_class"
 msgstr "В вашем классе этот уровень ещё не доступен"
@@ -994,19 +986,19 @@ msgid "level_title"
 msgstr "Уровень"
 
 msgid "levels"
-msgstr ""
+msgstr "уровни"
 
 msgid "link"
 msgstr "Ссылка"
 
 msgid "linkedin_page"
-msgstr ""
+msgstr "Hedy в LinkedIn"
 
 msgid "list"
 msgstr "список"
 
 msgid "list_variable_role"
-msgstr ""
+msgstr "список"
 
 msgid "logged_in_to_share"
 msgstr "Вы должны войти в систему, чтобы сохранить и поделиться программой."
@@ -1015,10 +1007,10 @@ msgid "login"
 msgstr "Войти"
 
 msgid "login_long"
-msgstr "Войдите в свой аккаунт"
+msgstr "Войти в свою учётную запись"
 
 msgid "login_to_save_your_work"
-msgstr ""
+msgstr "Войдите, чтобы сохранить работу"
 
 msgid "logout"
 msgstr "Выйти"
@@ -1097,10 +1089,10 @@ msgid "main_subtitle"
 msgstr "Поэтапный язык программирования"
 
 msgid "main_title"
-msgstr ""
+msgstr "Hedy"
 
 msgid "make_public"
-msgstr ""
+msgstr "Сделать публичным"
 
 msgid "make_sure_you_are_done"
 msgstr "Убедитесь, что вы закончили! После нажатия кнопки \"Сдать\" вы больше не сможете изменить свою программу."
@@ -1109,28 +1101,34 @@ msgid "male"
 msgstr "Мужчина"
 
 msgid "manage_students"
-msgstr ""
+msgstr "Управление учениками"
 
 msgid "manage_students_info"
-msgstr ""
+msgstr "Здесь вы можете добавлять учеников, создавая их учётные записи, приглашать их или удалять из своего класса."
 
-msgid "manual_out_of_date"
-msgstr ""
+msgid "mistake_how_to_fix"
+msgstr "Как это исправить"
+
+msgid "mistake_what_goes_wrong"
+msgstr "Что ученики делают не так"
 
 msgid "more_adventures"
-msgstr ""
+msgstr "Больше приключений"
 
 msgid "more_info"
-msgstr ""
+msgstr "Дополнительная информация"
 
 msgid "more_options"
-msgstr ""
+msgstr "Дополнительные параметры"
 
 msgid "multiple_keywords_warning"
-msgstr ""
+msgstr "Вы пытаетесь использовать ключевое слово {orig_keyword}, но оно может иметь несколько значений. Выберите нужное из этого списка и вставьте его в код вместе с фигурными скобками: {keyword_list}"
 
 msgid "multiple_levels_warning"
-msgstr ""
+msgstr "Мы заметили, что вы одновременно выбрали несколько уровней и включили фрагменты кода в своё приключение — это может вызвать проблемы с подсветкой синтаксиса и автоматическим переводом ключевых слов"
+
+msgid "mute"
+msgstr "Без звука"
 
 msgid "my_account"
 msgstr "Мой аккаунт"
@@ -1145,13 +1143,13 @@ msgid "my_messages"
 msgstr "Мои сообщения"
 
 msgid "my_public_profile"
-msgstr ""
+msgstr "Мой публичный профиль"
 
 msgid "name"
 msgstr "Имя"
 
 msgid "nav_hedy"
-msgstr ""
+msgstr "Hedy"
 
 msgid "nav_learn_more"
 msgstr "Узнать больше"
@@ -1160,31 +1158,31 @@ msgid "nav_start"
 msgstr "Главная"
 
 msgid "never"
-msgstr ""
+msgstr "Никогда"
 
 msgid "new_class_page"
-msgstr ""
+msgstr "Новый класс"
 
 msgid "new_password"
 msgstr "Новый пароль"
 
 msgid "new_password_repeat"
-msgstr ""
+msgstr "Повторите новый пароль"
 
 msgid "newline"
 msgstr "новая линия"
 
 msgid "newsletter"
-msgstr ""
+msgstr "Рассылка"
 
 msgid "next_adventure"
-msgstr ""
+msgstr "Следующее приключение"
 
 msgid "next_page"
 msgstr "Следующая страница"
 
 msgid "next_student"
-msgstr ""
+msgstr "Следующий ученик"
 
 msgid "no"
 msgstr "Нет"
@@ -1196,32 +1194,31 @@ msgid "no_accounts"
 msgstr "Нет учетных записей для создания."
 
 msgid "no_adventures_in_level"
-msgstr ""
+msgstr "Нет приключений на уровне"
 
 msgid "no_adventures_yet"
-msgstr ""
+msgstr "Нет публичных приключений, соответствующих этим критериям. Попробуйте поискать что-нибудь другое."
 
 msgid "no_built_in_adventures_available"
-msgstr ""
+msgstr "Нет доступных встроенных приключений"
 
 msgid "no_custom_adventures_available"
-msgstr ""
+msgstr "Нет доступных своих приключений"
 
 msgid "no_existing_class"
-msgstr ""
+msgstr "Нет существующих классов"
 
 msgid "no_more_flat_if"
 msgstr "Начиная с 8-го уровня, строка после `{if}` должна начинаться с 4 пробелов."
 
-#, fuzzy
 msgid "no_programs"
-msgstr "У вас пока нет программ."
+msgstr "Программ нет."
 
 msgid "no_shared_programs"
 msgstr "нету общих программ..."
 
 msgid "no_students"
-msgstr ""
+msgstr "В этом классе нет учеников"
 
 msgid "no_such_adventure"
 msgstr "Этого приключения не существует!"
@@ -1236,13 +1233,13 @@ msgid "no_such_program"
 msgstr "Нет такой программы Хеди!"
 
 msgid "no_tag"
-msgstr ""
+msgstr "Тег не указан!"
 
 msgid "no_usernames_found"
-msgstr ""
+msgstr "Пользователи не найдены"
 
 msgid "not_adventure_yet"
-msgstr ""
+msgstr "Сначала нужно ввести название приключения"
 
 msgid "not_enrolled"
 msgstr "Похоже, вы не в классе!"
@@ -1251,7 +1248,7 @@ msgid "not_in_class_no_handin"
 msgstr "Вы не находитесь в классе, поэтому вам не нужно ничего сдавать."
 
 msgid "not_logged_in_cantsave"
-msgstr ""
+msgstr "Ваша программа не будет сохранена."
 
 msgid "not_logged_in_handin"
 msgstr "Вы должны войти в систему, чтобы сдать задание."
@@ -1260,7 +1257,7 @@ msgid "not_teacher"
 msgstr "Похоже, Вы не преподаватель!"
 
 msgid "not_used_in_classes"
-msgstr ""
+msgstr "Сейчас не используется ни в одном классе. Перейдите в раздел «Для учителей > Страница класса > Настроить > Настроить уровни», чтобы добавить приключение на уровень для своих учеников. "
 
 msgid "number"
 msgstr "число"
@@ -1269,13 +1266,16 @@ msgid "number_lines"
 msgstr "Количество строк"
 
 msgid "number_of_errors"
-msgstr ""
+msgstr "Количество ошибок: {number_of_errors}"
 
 msgid "ok"
-msgstr ""
+msgstr "ОК"
+
+msgid "on_this_page"
+msgstr "На этой странице"
 
 msgid "one_level_error"
-msgstr ""
+msgstr "Нужно выбрать хотя бы один уровень."
 
 msgid "only_you_can_see"
 msgstr "Только вы можете видеть эту программу."
@@ -1311,19 +1311,19 @@ msgid "other_text"
 msgstr "Другой язык текста"
 
 msgid "outdated_class_warning"
-msgstr ""
+msgstr "Содержимое этого класса устарело."
 
 msgid "overwrite_warning"
 msgstr "У вас уже есть программа с таким наванием. Вы точно хотите перезаписать уже существующую программу?"
 
 msgid "owner"
-msgstr ""
+msgstr "Владелец"
 
 msgid "page_not_found"
 msgstr "Мы не смогли найти эту страницу!"
 
 msgid "pair_with_teacher"
-msgstr ""
+msgstr "Я хотел(а) бы получить помощь от другого учителя"
 
 msgid "password"
 msgstr "Пароль"
@@ -1356,20 +1356,19 @@ msgid "passwords_six"
 msgstr "Все пароли должны состоять из шести или более символов."
 
 msgid "passwords_too_short"
-msgstr ""
+msgstr "Пароли должны содержать не менее 6 символов. Исправьте следующие пароли, чтобы они были не короче 6 символов: {passwords}"
 
 msgid "pending_invites"
 msgstr "Ожидающие приглашения"
 
-#, fuzzy
 msgid "people_with_a_link"
-msgstr "Другие люди, имеющие ссылку, могут видеть эту программу. Ее также можно найти на странице \"Обзор\"."
+msgstr "Другие люди по ссылке могут видеть эту программу. Она также появится на странице вашего публичного профиля, если она у вас есть."
 
 msgid "performance_graph"
-msgstr ""
+msgstr "График успеваемости"
 
 msgid "performance_graph_info"
-msgstr ""
+msgstr "График, на котором видно количество приключений, пройденных вашими учениками, а также количество запусков и ошибок на каждом уровне."
 
 msgid "period"
 msgstr "период"
@@ -1381,7 +1380,10 @@ msgid "personal_text_invalid"
 msgstr "Ваш персональный текст неверен."
 
 msgid "phone_number"
-msgstr ""
+msgstr "Номер телефона"
+
+msgid "pick_a_level"
+msgstr "Выберите уровень"
 
 msgid "preferred_keyword_language"
 msgstr "Предпочитаемый язык ключевых слов"
@@ -1389,32 +1391,41 @@ msgstr "Предпочитаемый язык ключевых слов"
 msgid "preferred_language"
 msgstr "Предпочитаемый язык"
 
+msgid "prepare_a_level"
+msgstr "Подготовить уровень"
+
+msgid "prepare_a_level_info"
+msgstr "Всё необходимое для одного уровня в одном месте: что в нём нового, слайды для преподавания, рабочая тетрадь для раздачи и ошибки, которые, вероятно, допустят ваши ученики."
+
+msgid "prepare_level"
+msgstr "Подготовить уровень"
+
 msgid "present"
-msgstr ""
+msgstr "Презентовать"
 
 msgid "preview"
 msgstr "Предварительный просмотр"
 
 msgid "preview_as_student"
-msgstr ""
+msgstr "Предпросмотр класса как ученик"
 
 msgid "previewing_adventure"
-msgstr ""
+msgstr "Предпросмотр приключения"
 
 msgid "previewing_class"
-msgstr ""
+msgstr "Вы просматриваете класс <em>{class_name}</em> в режиме предпросмотра как учитель."
 
 msgid "previous_campaigns"
 msgstr "Посмотреть предыдущие кампании"
 
 msgid "previous_page"
-msgstr ""
+msgstr "Предыдущая страница"
 
 msgid "print_accounts"
-msgstr ""
+msgstr "Печать"
 
 msgid "print_accounts_title"
-msgstr ""
+msgstr "Учётные записи учеников для hedy.org"
 
 msgid "print_logo"
 msgstr "печатать"
@@ -1444,16 +1455,16 @@ msgid "program_header"
 msgstr "Мои программы"
 
 msgid "program_size_too_long"
-msgstr ""
+msgstr "Ваша программа не может быть длиннее {amount_lines} строк!"
 
 msgid "program_status_accepted"
-msgstr ""
+msgstr "Программа принята"
 
 msgid "program_status_not_accepted"
-msgstr ""
+msgstr "Программа не принята"
 
 msgid "program_too_large_exception"
-msgstr ""
+msgstr "Программа слишком большая"
 
 msgid "programming_experience"
 msgstr "Есть ли у вас опыт программирования?"
@@ -1468,19 +1479,19 @@ msgid "prompt_join_class"
 msgstr "Вы хотите присоединиться к этому классу?"
 
 msgid "provided_username_duplicates"
-msgstr ""
+msgstr "Вы указали следующие имена пользователей более одного раза: {usernames}"
 
 msgid "public"
 msgstr "Общественный"
 
 msgid "public_adventures"
-msgstr ""
+msgstr "Просмотреть публичные приключения"
 
 msgid "public_content"
-msgstr ""
+msgstr "Публичное содержимое"
 
 msgid "public_content_info"
-msgstr ""
+msgstr "Здесь вы найдёте наши публичные приключения. Это приключения, созданные другими учителями со всего мира. Посмотрите и смело используйте приключения на своих уроках."
 
 msgid "public_invalid"
 msgstr "Выбор данного соглашения является недействительным"
@@ -1504,7 +1515,7 @@ msgid "recover_password"
 msgstr "Запрос на сброс пароля"
 
 msgid "reject_program"
-msgstr ""
+msgstr "Отклонить программу"
 
 msgid "remove"
 msgstr "Удалить"
@@ -1519,19 +1530,19 @@ msgid "remove_student_prompt"
 msgstr "Вы уверены, что хотите удалить ученика из класса?"
 
 msgid "remove_user_prompt"
-msgstr ""
+msgstr "Подтвердите удаление этого пользователя из класса."
 
 msgid "rename_class"
-msgstr ""
+msgstr "Переименовать класс"
 
 msgid "rename_class_prompt"
-msgstr ""
+msgstr "Какое название вы хотите дать этому классу?"
 
 msgid "repair_program_logo_alt"
 msgstr "Восстановление значка программы"
 
 msgid "repeat_dep"
-msgstr ""
+msgstr "Начиная с уровня 8, `{repeat}` нужно использовать с отступами. Примеры можно увидеть на вкладке `{repeat}` на уровне 8."
 
 msgid "repeat_match_password"
 msgstr "Повторный пароль не совпадает."
@@ -1549,7 +1560,7 @@ msgid "report_success"
 msgstr "Эта программа была сообщена"
 
 msgid "request_invalid"
-msgstr ""
+msgstr "Недопустимый запрос"
 
 msgid "request_teacher"
 msgstr "Вы хотите подать заявку на учетную запись учителя?"
@@ -1567,13 +1578,13 @@ msgid "reset_adventures"
 msgstr "Сброс выбранных приключений"
 
 msgid "reset_button"
-msgstr ""
+msgstr "Сбросить"
 
 msgid "reset_password"
 msgstr "Сброс пароля"
 
 msgid "restart"
-msgstr ""
+msgstr "Перезапустить"
 
 msgid "retrieve_adventure_error"
 msgstr "Вы не можете посмотреть это приключение!"
@@ -1582,10 +1593,10 @@ msgid "retrieve_class_error"
 msgstr "Только преподаватели могут получать классы"
 
 msgid "retrieve_tag_error"
-msgstr ""
+msgstr "Ошибка получения тегов"
 
 msgid "role"
-msgstr ""
+msgstr "Роль"
 
 msgid "run_code_button"
 msgstr "Выполнить код"
@@ -1600,34 +1611,34 @@ msgid "save_success_detail"
 msgstr "Программа сохранена."
 
 msgid "save_turtle_drawing"
-msgstr ""
+msgstr "Сохранить рисунок"
 
 msgid "saving_language_failed"
-msgstr ""
+msgstr "Не удалось изменить язык приключения."
 
 msgid "search"
-msgstr "Поиск..."
+msgstr "Поиск…."
 
 msgid "search_button"
 msgstr "Поиск"
 
 msgid "search_results"
-msgstr ""
+msgstr "Результаты поиска"
 
 msgid "second_teacher"
-msgstr ""
+msgstr "Второй учитель"
 
 msgid "second_teacher_copy_prompt"
-msgstr ""
+msgstr "Вы уверены, что хотите скопировать этого учителя?"
 
 msgid "second_teacher_prompt"
-msgstr ""
+msgstr "Введите имя пользователя учителя, чтобы пригласить его."
 
 msgid "second_teacher_warning"
-msgstr ""
+msgstr "Все учителя в этом классе могут его настраивать."
 
 msgid "see_adventure_shared_class"
-msgstr ""
+msgstr "Вы видите это приключение, потому что делите класс {class_name} с {creator}"
 
 msgid "see_certificate"
 msgstr "См. сертификат {username}!"
@@ -1639,19 +1650,19 @@ msgid "select_adventures"
 msgstr "Выберите приключения"
 
 msgid "select_all"
-msgstr ""
+msgstr "Выбрать все"
 
 msgid "select_classes"
-msgstr ""
+msgstr "Выбрать классы"
 
 msgid "select_lang"
-msgstr ""
+msgstr "Выберите язык"
 
 msgid "select_levels"
 msgstr "Выберите уровни"
 
 msgid "selected"
-msgstr ""
+msgstr "Выбрано"
 
 msgid "self_removal_prompt"
 msgstr "Вы уверены, что хотите покинуть этот класс?"
@@ -1666,25 +1677,25 @@ msgid "sent_password_recovery"
 msgstr "Вскоре вы должны получить электронное письмо с инструкциями по сбросу пароля."
 
 msgid "set_adventure_name"
-msgstr ""
+msgstr "Какое название вы хотите дать своему приключению?"
 
 msgid "settings"
 msgstr "Мои личные настройки"
 
 msgid "settings_header"
-msgstr ""
+msgstr "Настройки"
 
 msgid "share_by_giving_link"
 msgstr "Покажите свою программу другим людям, предоставив им ссылку ниже:"
 
 msgid "share_with_teachers"
-msgstr ""
+msgstr "Поделиться с учителями"
 
 msgid "share_your_program"
 msgstr "Поделитесь своей программой"
 
 msgid "show_editor"
-msgstr ""
+msgstr "Показать редактор"
 
 msgid "signup_student_or_teacher"
 msgstr "Вы студент или учитель?"
@@ -1696,34 +1707,37 @@ msgid "slash"
 msgstr "слэш"
 
 msgid "sleeping"
-msgstr ""
+msgstr "Сплю..."
 
 msgid "slides"
-msgstr ""
+msgstr "Слайды"
 
 msgid "slides_card_info"
-msgstr ""
+msgstr "Готовые слайды для каждого уровня Hedy, которые можно использовать во время урока. Вы можете презентовать их прямо из браузера."
 
 msgid "slides_for_level"
-msgstr ""
+msgstr "Слайды для уровня"
 
 msgid "slides_info"
-msgstr ""
+msgstr "Для каждого уровня Hedy мы создали слайды, помогающие вам преподавать. Слайды содержат объяснения каждого уровня и примеры кода Hedy, которые можно запускать прямо в слайдах. Вводные слайды — это общее объяснение Hedy. Просто нажмите «Презентовать» и начинайте! Во время презентации можно нажать 'S', чтобы открыть заметки докладчика. Эти заметки проведут вас через урок и предложат методические советы."
+
+msgid "slides_level_info"
+msgstr "Презентуйте уровень, по одной концепции за раз"
 
 msgid "social_media"
 msgstr "Социальные сети"
 
 msgid "solution"
-msgstr ""
+msgstr "Решение"
 
 msgid "solution_example"
-msgstr ""
+msgstr "Пример решения"
 
 msgid "solution_example_explanation"
-msgstr ""
+msgstr "Здесь размещается решение вашего приключения. Это может пригодиться, если вы хотите поделиться приключением с другими учителями, чтобы они знали ваше предлагаемое решение."
 
 msgid "some_rows_missing_separator"
-msgstr ""
+msgstr "В следующих строках нет точки с запятой, поэтому отсутствует либо имя пользователя, либо пароль: {rows}"
 
 #, fuzzy
 msgid "something_went_wrong_keyword_parsing"
@@ -1733,28 +1747,28 @@ msgid "space"
 msgstr "пространство"
 
 msgid "standard_new_class"
-msgstr ""
+msgstr "Стандартный новый класс"
 
 msgid "standard_new_class_explanation"
-msgstr ""
+msgstr "Создать класс с включёнными приключениями, созданными командой Hedy."
 
 msgid "star"
 msgstr "звезда"
 
 msgid "start_learning"
-msgstr ""
+msgstr "Начнём!"
 
 msgid "start_teaching"
-msgstr ""
+msgstr "Создать учётную запись"
 
 msgid "step_title"
 msgstr "Задание"
 
 msgid "stepper_variable_role"
-msgstr ""
+msgstr "шаговый"
 
 msgid "stop"
-msgstr ""
+msgstr "Стоп"
 
 msgid "stop_code_button"
 msgstr "Остановить программу"
@@ -1763,28 +1777,28 @@ msgid "string"
 msgstr "текст"
 
 msgid "student_accounts_created"
-msgstr ""
+msgstr "Учётные записи учеников успешно созданы"
 
 msgid "student_adventures_table"
-msgstr ""
+msgstr "Приключения ученика"
 
 msgid "student_adventures_table_explanation"
-msgstr ""
+msgstr "В этой таблице показаны программы, созданные учениками для каждого приключения на уровне. Нажав на значок глаза, можно открыть страницу программы; просмотрев программу, можно поставить галочку, отметив её выполнение."
 
 msgid "student_already_invite"
 msgstr "У этого студента уже есть ожидающее приглашение."
 
 msgid "student_in_another_class"
-msgstr ""
+msgstr "Этот ученик состоит в другом классе. Попросите ученика покинуть все классы и попробуйте снова."
 
 msgid "student_information"
-msgstr ""
+msgstr "Информация об ученике"
 
 msgid "student_information_explanation"
-msgstr ""
+msgstr "В этой таблице показана основная информация об учениках вашего класса. Здесь также можно выполнить несколько действий: сменить пароль ученика, нажав на значок карандаша, открыть страницу программы ученика, нажав на значок кода, и удалить ученика из класса, нажав на красный значок корзины."
 
 msgid "student_removed_successfully"
-msgstr ""
+msgstr "Ученик успешно удалён из класса"
 
 msgid "student_signup_header"
 msgstr "Студент"
@@ -1804,48 +1818,47 @@ msgstr "Вы уверены, что хотите отправить эту пр�
 msgid "submitted"
 msgstr "Отправлено"
 
-#, fuzzy
 msgid "submitted_header"
-msgstr "Это представленная программа, и она не может быть изменена."
+msgstr "Эта программа успешно отправлена, и её больше нельзя редактировать."
 
 msgid "subscribe"
 msgstr "Подписаться"
 
 msgid "subscribe_message"
-msgstr ""
+msgstr "Будьте в курсе наших последних новостей и событий, подписавшись на нашу рассылку. Вы можете подписаться, нажав кнопку ниже. Если передумаете, используйте ссылку для отписки в любом из наших писем."
 
 msgid "subscribe_newsletter"
 msgstr "Подписаться на рассылку новостей"
 
 msgid "subscribed_header"
-msgstr ""
+msgstr "Вы подписаны"
 
 msgid "subscribed_message"
-msgstr ""
+msgstr "Спасибо за подписку на нашу рассылку! Надеемся, вам нравится, и будем рады услышать ваши отзывы на нашем <a target=\"_blank\" href=\"https://discord.gg/8yY7dEme9r\">Discord-сервере</a>. Если передумаете, используйте ссылку для отписки в любом из наших писем."
 
 msgid "successful_runs"
-msgstr ""
+msgstr "Успешных запусков: {successful_runs}"
 
 msgid "successfully_subscribed"
-msgstr ""
+msgstr "Вы успешно подписались на нашу рассылку"
 
 msgid "surname"
 msgstr "Имя"
 
 msgid "survey_skip"
-msgstr ""
+msgstr "Больше не показывать"
 
 msgid "survey_submit"
-msgstr ""
+msgstr "Отправить"
 
 msgid "tag_in_adventure"
-msgstr ""
+msgstr "Тег в приключении"
 
 msgid "tag_input_placeholder"
-msgstr ""
+msgstr "Введите новый тег"
 
 msgid "tags"
-msgstr ""
+msgstr "Теги"
 
 msgid "teacher"
 msgstr "Учитель"
@@ -1866,32 +1879,38 @@ msgid "teacher_welcome"
 msgstr "Добро пожаловать в Hedy! Теперь вы являетесь гордым владельцем учетной записи учителя, которая позволяет вам создавать классы и приглашать учеников."
 
 msgid "teachers"
-msgstr ""
+msgstr "Учителя"
 
 msgid "teaching_materials"
-msgstr ""
+msgstr "Учебные материалы"
 
 msgid "teaching_materials_info"
-msgstr ""
+msgstr "Здесь вы найдёте учебные материалы."
 
-#, fuzzy
 msgid "template_code"
 msgstr ""
 "Это объяснение моего приключения!\n"
 "\n"
-"Таким образом я могу показать команду: <code>{print}</code>\n"
+"Таким образом я могу показать команду: <code>print</code>\n"
 "\n"
 "Но иногда я могу захотеть показать часть кода, например, вот так:\n"
 "<pre>\n"
-"ask Как вас зовут?\n"
-"echo Итак, вас зовут \n"
+"ask What's your name?\n"
+"print so your name is _\n"
 "</pre>"
 
 msgid "template_code_solution"
 msgstr ""
+"Это решение моего приключения!\n"
+"\n"
+"А вот правильный код:\n"
+"<pre>\n"
+"ask What's your name?\n"
+"print so your name is answer\n"
+"</pre>"
 
 msgid "this_adventure_has_an_example_solution"
-msgstr ""
+msgstr "У этого приключения есть пример решения"
 
 msgid "this_turns_in_assignment"
 msgstr "После этого сдайте задание преподавателю."
@@ -1915,7 +1934,7 @@ msgid "title_for-teacher"
 msgstr "Hedy - Для учителей"
 
 msgid "title_grade_class"
-msgstr ""
+msgstr "Оценить класс"
 
 msgid "title_learn-more"
 msgstr "Hedy - Узнать больше"
@@ -1927,7 +1946,7 @@ msgid "title_my-profile"
 msgstr "Hedy - Мой аккаунт"
 
 msgid "title_performance_graph"
-msgstr ""
+msgstr "График успеваемости"
 
 msgid "title_privacy"
 msgstr "Hedy - Политика конфиденциальности"
@@ -1936,7 +1955,7 @@ msgid "title_programs"
 msgstr "Hedy - Мои программы"
 
 msgid "title_public-adventures"
-msgstr ""
+msgstr "Hedy — публичные приключения"
 
 msgid "title_recover"
 msgstr "Hedy - Восстановить аккаунт"
@@ -1948,7 +1967,7 @@ msgid "title_signup"
 msgstr "Hedy - Зарегистрироваться"
 
 msgid "title_start"
-msgstr "Hedy - язык постепенного программирования"
+msgstr "Хеди — простое текстовое программирование"
 
 msgid "title_view-adventure"
 msgstr "Hedy - Просмотр приключений"
@@ -1957,10 +1976,10 @@ msgid "token_invalid"
 msgstr "Ваш токен недействителен."
 
 msgid "too_many_accounts"
-msgstr ""
+msgstr "Нельзя создать более 100 учётных записей учеников."
 
 msgid "tooltip_level_locked"
-msgstr ""
+msgstr "Ваш учитель отключил этот уровень"
 
 msgid "translate_error"
 msgstr "Во время перевода кода что-то пошло не так. Попробуйте запустить код, чтобы увидеть возможные ошибки. Код с ошибками не может быть переведён."
@@ -1969,79 +1988,79 @@ msgid "translating_hedy"
 msgstr "Перевод Hedy"
 
 msgid "translator"
-msgstr ""
+msgstr "Переводчик"
 
 msgid "turned_into_teacher"
-msgstr ""
+msgstr "Поздравляем! Вы успешно стали учителем."
 
 msgid "unarchive"
-msgstr ""
+msgstr "Разархивировать"
 
 msgid "unarchive_class"
-msgstr ""
+msgstr "Разархивировать класс"
 
 msgid "unauthorized"
 msgstr "У вас нет доступа к этой странице"
 
 msgid "unfavourite_confirm"
-msgstr ""
+msgstr "Вы уверены, что хотите убрать эту программу из избранного?"
 
 msgid "unfavourite_success"
-msgstr ""
+msgstr "Ваша программа удалена из избранного."
 
 msgid "unknown_variable_role"
-msgstr ""
+msgstr "неизвестно"
 
 msgid "unsaved_class_changes"
 msgstr "Есть несохраненные изменения, вы уверены, что хотите покинуть эту страницу?"
 
 msgid "unsubmit_program"
-msgstr ""
+msgstr "Отозвать программу"
 
 msgid "unsubmit_warning"
-msgstr ""
+msgstr "Вы уверены, что хотите отозвать эту программу?"
 
 msgid "unsubmitted"
-msgstr ""
+msgstr "Не отправлено"
 
 msgid "unsubscribed_header"
-msgstr ""
+msgstr "Вы отписались"
 
 msgid "unsubscribed_message"
-msgstr ""
+msgstr "Жаль, что вы уходите. Если вы отписались случайно, можете подписаться снова, заполнив <a href=\"http://eepurl.com/hk77Mv\">эту форму</a>."
 
 msgid "update"
-msgstr ""
+msgstr "Обновить"
 
 msgid "update_adventure_prompt"
 msgstr "Вы уверены, что хотите обновить это приключение?"
 
 msgid "update_class_prompt"
-msgstr ""
+msgstr "Вы уверены, что хотите обновить класс?"
 
 msgid "update_public"
 msgstr "Обновление публичного профиля"
 
 msgid "updated"
-msgstr ""
+msgstr "Обновлено"
 
 msgid "updating_indicator"
-msgstr ""
+msgstr "Обновление"
 
 msgid "use_custom_passwords"
-msgstr ""
+msgstr "Указать свои пароли"
 
 msgid "use_generated_passwords"
-msgstr ""
+msgstr "Автоматически генерировать пароли"
 
 msgid "use_of_blanks_exception"
-msgstr ""
+msgstr "Использование пропусков в программах"
 
 msgid "use_of_nested_functions_exception"
-msgstr ""
+msgstr "Использование вложенных функций"
 
 msgid "used_in"
-msgstr ""
+msgstr "Используется в:"
 
 msgid "user"
 msgstr "пользователь"
@@ -2052,11 +2071,8 @@ msgstr "Этот пользователь не существует или у н
 msgid "username"
 msgstr "Имя пользователя"
 
-msgid "username_contains_invalid_symbol"
-msgstr ""
-
 msgid "username_contains_separator"
-msgstr ""
+msgstr "Имена пользователей не могут содержать точку с запятой. Возможно, вы хотите указать свои пароли? Тогда переключите переключатель паролей и создайте учётные записи заново. Если нет, удалите точку с запятой из следующих имён пользователей: {usernames}"
 
 msgid "username_empty"
 msgstr "Вы не ввели имя пользователя!"
@@ -2064,81 +2080,104 @@ msgstr "Вы не ввели имя пользователя!"
 msgid "username_invalid"
 msgstr "Ваше имя пользователя недействительно."
 
-msgid "username_special"
-msgstr "Имя пользователя не может содержать `:` или `@`."
+msgid "username_invalid_characters"
+msgstr "Имена пользователей могут содержать только буквы, цифры и символы _ - . (без пробелов и @)."
 
 msgid "username_three"
 msgstr "Имя пользователя должно содержать не менее трех символов."
 
+msgid "usernames_invalid_characters"
+msgstr "Имена пользователей могут содержать только буквы, цифры и символы _ - . (без пробелов и @). Исправьте следующие имена пользователей: {usernames}"
+
 msgid "usernames_too_short"
-msgstr ""
+msgstr "Имена пользователей должны содержать не менее 3 символов. Исправьте следующие имена пользователей, чтобы они были не короче 3 символов: {usernames}"
 
 msgid "usernames_unavailable"
-msgstr ""
+msgstr "Следующие имена пользователей недоступны: {usernames}. Вы можете создать похожие учётные записи, например, добавив подчёркивание или название своего класса."
 
 msgid "view_adventures"
-msgstr ""
+msgstr "Просмотреть приключения"
 
 msgid "view_classes"
-msgstr ""
+msgstr "Просмотреть классы"
 
 msgid "view_program"
 msgstr "Просмотр программы"
 
 msgid "view_slides"
-msgstr ""
+msgstr "Просмотреть слайды"
 
 msgid "waiting_for_submit"
-msgstr ""
+msgstr "Ожидание отправки"
 
 msgid "walker_variable_role"
-msgstr ""
+msgstr "шаговый"
+
+msgid "weblate_modal_text"
+msgstr "Переводы Hedy поддерживаются сообществом и могут обновляться через платформу Weblate. Подробнее о переводе можно узнать в <a href=\"https://github.com/hedyorg/hedy/wiki/Hedy-Translation-Tutorial\" target=\"_blank\" rel=\"noopener\">руководстве по переводу Hedy</a>. Спасибо за вклад!"
 
 msgid "website"
-msgstr ""
+msgstr "Сайт"
+
+msgid "what_is_new_in_level"
+msgstr "Что нового на этом уровне?"
 
 msgid "what_is_your_role"
-msgstr ""
+msgstr "Какова ваша роль?"
+
+msgid "work_in_progress"
+msgstr "В разработке"
+
+msgid "workbook"
+msgstr "Рабочая тетрадь"
 
 msgid "workbook_circle_question_text"
-msgstr ""
+msgstr "**Вопрос**: Обведите {goal} в этом коде:"
 
 msgid "workbook_circle_question_title"
-msgstr ""
+msgstr "Назначить"
 
 msgid "workbook_define_question_text"
-msgstr ""
+msgstr "**Вопрос**: Что означает {word}?"
 
 msgid "workbook_define_question_title"
-msgstr ""
+msgstr "Определить"
 
 msgid "workbook_input_question_text"
-msgstr ""
+msgstr "**Вопрос**: Какой фрагмент кода дал этот вывод?"
 
 msgid "workbook_input_question_title"
-msgstr ""
+msgstr "Ввод"
+
+msgid "workbook_level_info"
+msgstr "Упражнения для печати, без экрана"
 
 msgid "workbook_multiple_choice_question_text"
-msgstr ""
+msgstr "**Вопрос**: Этот код правильный или в нём есть ошибка?"
 
 msgid "workbook_multiple_choice_question_title"
-msgstr ""
+msgstr "Выбрать"
 
 msgid "workbook_open_question_title"
-msgstr ""
+msgstr "Открытый вопрос"
 
 msgid "workbook_output_question_text"
-msgstr ""
+msgstr "**Вопрос**: Каков вывод этого кода?"
 
 msgid "workbook_output_question_title"
-msgstr ""
+msgstr "Вывод"
+
+msgid "workbooks"
+msgstr "Рабочие тетради"
+
+msgid "workbooks_info"
+msgstr "Печатные упражнения для каждого уровня, чтобы ученики могли практиковаться в чтении и написании кода Hedy без компьютера."
 
 msgid "written_by"
-msgstr ""
+msgstr "Автор"
 
-#, fuzzy
 msgid "year_invalid"
-msgstr "Пожалуйста, введите год между 1900 и {текущий_год}."
+msgstr "Пожалуйста, введите год от 1900 до {current_year}."
 
 msgid "yes"
 msgstr "Да"
@@ -2521,53 +2560,8 @@ msgstr "Ваша программа"
 #~ msgid "usernames_exist"
 #~ msgstr "Одно или несколько имен пользователей уже используются."
 
-#~ msgid "**Question**: What is the output of this code?"
-#~ msgstr ""
-
-#~ msgid "Output"
-#~ msgstr ""
-
-#~ msgid "clear"
-#~ msgstr ""
-
-#~ msgid "bug"
-#~ msgstr ""
-
-#~ msgid "feature"
-#~ msgstr ""
-
-#~ msgid "feedback"
-#~ msgstr ""
-
-#~ msgid "feedback_message_success"
-#~ msgstr ""
-
-#~ msgid "feedback_modal_message"
-#~ msgstr ""
-
-#~ msgid "Adventure"
-#~ msgstr ""
-
-#~ msgid "Answer"
-#~ msgstr ""
-
 #~ msgid "adventure_prompt"
 #~ msgstr "Пожалуйста введите название приключения"
-
-#~ msgid "select_tag"
-#~ msgstr ""
-
-#~ msgid "Delete"
-#~ msgstr ""
-
-#~ msgid "select_class"
-#~ msgstr ""
-
-#~ msgid "survey"
-#~ msgstr ""
-
-#~ msgid "survey_completed"
-#~ msgstr ""
 
 #~ msgid "invalid_tutorial_step"
 #~ msgstr "Неверный шаг учебника"
@@ -2588,12 +2582,6 @@ msgstr "Ваша программа"
 
 #~ msgid "tutorial_title_not_found"
 #~ msgstr "Шаг учебника не найден"
-
-#~ msgid "put"
-#~ msgstr ""
-
-#~ msgid "disable_explore_page"
-#~ msgstr ""
 
 #~ msgid "hedy_choice_title"
 #~ msgstr "Выбор Хеди"
@@ -2618,12 +2606,6 @@ msgstr "Ваша программа"
 
 #~ msgid "developers_mode"
 #~ msgstr "Режим программиста"
-
-#~ msgid "disable_parsons"
-#~ msgstr ""
-
-#~ msgid "disable_quizes"
-#~ msgstr ""
 
 #~ msgid "disabled_button_quiz"
 #~ msgstr "Ваша оценка за тест ниже порогового значения, попробуйте еще раз!"
@@ -2718,51 +2700,11 @@ msgstr "Ваша программа"
 #~ msgid "mandatory_mode"
 #~ msgstr "Обязательный режим разработчика"
 
-#~ msgid "parsons_title"
-#~ msgstr ""
-
-#~ msgid "quiz_tab"
-#~ msgstr ""
-
 #~ msgid "read_code_label"
 #~ msgstr "Чтение вслух"
-
-#~ msgid "archive_clas"
-#~ msgstr ""
-
-#~ msgid "gradeclass_info"
-#~ msgstr ""
-
-#~ msgid "class_performance_graph"
-#~ msgstr ""
-
-#~ msgid "performance_graph_explanation"
-#~ msgstr ""
-
-#~ msgid "suggestion_color"
-#~ msgstr ""
-
-#~ msgid "suggestion_note"
-#~ msgstr ""
-
-#~ msgid "suggestion_number"
-#~ msgstr ""
-
-#~ msgid "suggestion_numbers_or_strings"
-#~ msgstr ""
-
-#~ msgid "facebook_page"
-#~ msgstr ""
-
-#~ msgid "view_teaching_materials_of_level"
-#~ msgstr ""
-
-#~ msgid "preview_teacher_mode"
-#~ msgstr ""
-
-#~ msgid "usage"
-#~ msgstr ""
 
 #~ msgid "adventure_exp_3"
 #~ msgstr "Убедитесь, что вы всегда окружаете ключевые слова символом { }, тогда они будут распознаны правильно. Вы можете использовать кнопку \"предварительный просмотр\" для просмотра стилизованной версии вашего приключения. Чтобы просмотреть приключение на специальной странице, выберите \"просмотр\" на странице учителя."
 
+#~ msgid "username_special"
+#~ msgstr "Имя пользователя не может содержать `:` или `@`."

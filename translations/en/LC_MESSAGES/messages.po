@@ -90,6 +90,9 @@ msgstr "We detected that there seems to be too few {leading_spaces} spaces used 
 msgid "Non Decimal Variable"
 msgstr "We detected that at line {line_number} you used a number Hedy does not support! Can you try a decimal number, like 2?"
 
+msgid "Output"
+msgstr "Output"
+
 msgid "Parse"
 msgstr "We detected that `{character_found}` is being used on line {location[0]} which is not allowed. Can you try looking for a missing or an extra character on your code?"
 
@@ -303,6 +306,9 @@ msgstr "Available levels"
 msgid "back_to_class"
 msgstr "Go back to class"
 
+msgid "back_to_top"
+msgstr "Back to top"
+
 msgid "background_information"
 msgstr "Background information"
 
@@ -426,11 +432,14 @@ msgstr "Command not correct anymore"
 msgid "commands"
 msgstr "Commands"
 
+msgid "common_mistakes"
+msgstr "Common mistakes"
+
 msgid "configure"
 msgstr "Configure"
 
 msgid "configure_class"
-msgstr "Cofigure class"
+msgstr "Configure class"
 
 msgid "configure_class_info"
 msgstr "Here you can personalize some of the settings in your class. You can add, delete or reorder the adventures, and enable some levels after a given date."
@@ -482,6 +491,9 @@ msgstr "Please copy and paste this link into a new tab:"
 
 msgid "copy_second_teachers"
 msgstr "Invite the second teachers from the other class to this one?"
+
+msgid "copy_to_editor"
+msgstr "Copy code to editor"
 
 msgid "country"
 msgstr "Country"
@@ -633,6 +645,9 @@ msgstr "Discord server"
 msgid "distinguished_user"
 msgstr "Distinguished user"
 
+msgid "dont_show_message_again"
+msgstr "Don't show this message again"
+
 msgid "double quotes"
 msgstr "double quotes"
 
@@ -653,6 +668,9 @@ msgstr "Edit adventure"
 
 msgid "edit_code_button"
 msgstr "Edit code"
+
+msgid "editor"
+msgstr "Code editor"
 
 msgid "email"
 msgstr "Email"
@@ -830,6 +848,9 @@ msgstr "I'll work on it a little longer"
 
 msgid "image_invalid"
 msgstr "The image you chose is invalid."
+
+msgid "improve_translation_on_weblate"
+msgstr "Improve this translation on Weblate"
 
 msgid "incomplete_command_exception"
 msgstr "Incomplete Command"
@@ -1069,6 +1090,12 @@ msgstr "Textual programming for the classroom"
 msgid "main_title"
 msgstr "Hedy"
 
+msgid "make_adventure_private"
+msgstr "Make private"
+
+msgid "make_adventure_private_prompt"
+msgstr "Are you sure you want to make this adventure private? It will no longer be visible to other teachers, but its creator can share it again."
+
 msgid "make_public"
 msgstr "Make public"
 
@@ -1084,8 +1111,11 @@ msgstr "Manage Students"
 msgid "manage_students_info"
 msgstr "Here you can add students by creating their accounts, invite them, or remove them from your class."
 
-msgid "manual_out_of_date"
-msgstr "This version of the manual is out of date with respect to the current UI."
+msgid "mistake_how_to_fix"
+msgstr "How to fix it"
+
+msgid "mistake_what_goes_wrong"
+msgstr "What students get wrong"
 
 msgid "more_adventures"
 msgstr "More adventures"
@@ -1101,6 +1131,9 @@ msgstr "You are trying to use the keyword {orig_keyword}, but this keyword might
 
 msgid "multiple_levels_warning"
 msgstr "We've noticed you have both selected several levels and included code snippets in your adventure, this might cause issues with the syntax highlighter and the automatic translation of keywords"
+
+msgid "mute"
+msgstr "Mute"
 
 msgid "my_account"
 msgstr "My account"
@@ -1229,7 +1262,7 @@ msgid "not_teacher"
 msgstr "Looks like you are not a teacher!"
 
 msgid "not_used_in_classes"
-msgstr "Not currently used in any class "
+msgstr "Not currently used in any class. Go to For Teachers > Class page > Configure > Customize Levels to add the adventure to a level for your students. "
 
 msgid "number"
 msgstr "a number"
@@ -1242,6 +1275,9 @@ msgstr "Number of errors: {number_of_errors}"
 
 msgid "ok"
 msgstr "OK"
+
+msgid "on_this_page"
+msgstr "On this page"
 
 msgid "one_level_error"
 msgstr "You need to select at least one level."
@@ -1351,11 +1387,23 @@ msgstr "Your personal text is invalid."
 msgid "phone_number"
 msgstr "Phone number"
 
+msgid "pick_a_level"
+msgstr "Pick a level"
+
 msgid "preferred_keyword_language"
 msgstr "Preferred keyword language"
 
 msgid "preferred_language"
 msgstr "Preferred language"
+
+msgid "prepare_a_level"
+msgstr "Prepare a level"
+
+msgid "prepare_a_level_info"
+msgstr "Everything you need for one level in one place: what is new in it, the slides to teach it with, the workbook to hand out, and the mistakes your students are likely to make."
+
+msgid "prepare_level"
+msgstr "Prepare level"
 
 msgid "present"
 msgstr "Present"
@@ -1670,13 +1718,16 @@ msgid "slides"
 msgstr "Slides"
 
 msgid "slides_card_info"
-msgstr "Ready-made slides for every Hedy level, to use while you teach. You can present them straight from your browser or download them."
+msgstr "Ready-made slides for every Hedy level, to use while you teach. You can present them straight from your browser."
 
 msgid "slides_for_level"
 msgstr "Slides for level"
 
 msgid "slides_info"
-msgstr "For each level of Hedy, we have created slides to help you teach. The slides contain explanations of each level, and Hedy examples that you can run inside the slides. Just click the link and get started! the Introduction slides are a general explanation of Hedy before level 1. You can find more information about the slides in the <a href=\"https://hedy.org/for-teachers/manual/features\">teacher's manual</a>."
+msgstr "For each level of Hedy, we have created slides to help you teach. The slides contain explanations of each level, and Hedy code examples that you can run inside the slides. The Introduction slides are a general explanation of Hedy. Just click \"Present\" and get started! While presenting you can press 'S' to start up the speaker's notes. These notes will guide you through your lesson and will offer you teaching tips."
+
+msgid "slides_level_info"
+msgstr "Present the level, one concept at a time"
 
 msgid "social_media"
 msgstr "Social media"
@@ -2024,9 +2075,6 @@ msgstr "This user either doesn't exist or doesn't have a public profile"
 msgid "username"
 msgstr "Username"
 
-msgid "username_contains_invalid_symbol"
-msgstr "Usernames cannot contain the symbol ':' or '@'. Remove these symbols from following usernames: {usernames}"
-
 msgid "username_contains_separator"
 msgstr "Usernames cannot contain a semicolon. Perhaps you want to supply your own passwords? If so, click the passwords toggle and create the accounts again. If this is not the case, remove the semicolon from the following usernames: {usernames}"
 
@@ -2036,11 +2084,14 @@ msgstr "You didn't enter an username!"
 msgid "username_invalid"
 msgstr "Your username is invalid."
 
-msgid "username_special"
-msgstr "Username cannot contain `:` or `@`."
+msgid "username_invalid_characters"
+msgstr "Usernames can only contain letters, numbers and the symbols _ - . (no spaces or @)."
 
 msgid "username_three"
 msgstr "Username must contain at least three characters."
+
+msgid "usernames_invalid_characters"
+msgstr "Usernames can only contain letters, numbers and the symbols _ - . (no spaces or @). Correct the following usernames: {usernames}"
 
 msgid "usernames_too_short"
 msgstr "Usernames must be at least 3 characters long. Correct the following usernames, so that they are 3 or more symbols: {usernames}"
@@ -2066,11 +2117,23 @@ msgstr "Waiting for submit"
 msgid "walker_variable_role"
 msgstr "walker"
 
+msgid "weblate_modal_text"
+msgstr "Translations of Hedy are maintained by the community and can be updated via the platform Weblate. More information on translating can be found in the <a href=\"https://github.com/hedyorg/hedy/wiki/Hedy-Translation-Tutorial\" target=\"_blank\" rel=\"noopener\">Hedy Translation Tutorial</a>. Thank you for contributing!"
+
 msgid "website"
 msgstr "Website"
 
+msgid "what_is_new_in_level"
+msgstr "What is new in this level?"
+
 msgid "what_is_your_role"
 msgstr "What is your role?"
+
+msgid "work_in_progress"
+msgstr "Work in progress"
+
+msgid "workbook"
+msgstr "Workbook"
 
 msgid "workbook_circle_question_text"
 msgstr "**Question**: Circle {goal} in this code:"
@@ -2090,6 +2153,9 @@ msgstr "**Question**: Which code snippet produced this output?"
 msgid "workbook_input_question_title"
 msgstr "Input"
 
+msgid "workbook_level_info"
+msgstr "Exercises to print, away from the screen"
+
 msgid "workbook_multiple_choice_question_text"
 msgstr "**Question**: Is this code correct or does it have an error?"
 
@@ -2104,6 +2170,12 @@ msgstr "**Question**: What is the output of this code?"
 
 msgid "workbook_output_question_title"
 msgstr "Output"
+
+msgid "workbooks"
+msgstr "Workbooks"
+
+msgid "workbooks_info"
+msgstr "Printable exercises per level, so your students can practise reading and writing Hedy code away from the computer."
 
 msgid "written_by"
 msgstr "Written by"
@@ -2538,9 +2610,6 @@ msgstr "Your program"
 #~ msgid "**Question**: What is the output of this code?"
 #~ msgstr "**Question**: What is the output of this code?"
 
-#~ msgid "Output"
-#~ msgstr "Output"
-
 #~ msgid "clear"
 #~ msgstr "Clear"
 
@@ -2770,4 +2839,16 @@ msgstr "Your program"
 
 #~ msgid "adventure_exp_3"
 #~ msgstr "Make sure you always surround keywords with { } when you write them outside of code blocks, then they are recognized correctly. You can use the \"preview\" button to view a styled version of your adventure. To view the adventure on a dedicated page, select \"view\" from the teachers page."
+
+#~ msgid "workbook_solutions"
+#~ msgstr "Workbook solutions"
+
+#~ msgid "manual_out_of_date"
+#~ msgstr "This version of the manual is out of date with respect to the current UI."
+
+#~ msgid "username_contains_invalid_symbol"
+#~ msgstr "Usernames cannot contain the symbol ':' or '@'. Remove these symbols from following usernames: {usernames}"
+
+#~ msgid "username_special"
+#~ msgstr "Username cannot contain `:` or `@`."
 
